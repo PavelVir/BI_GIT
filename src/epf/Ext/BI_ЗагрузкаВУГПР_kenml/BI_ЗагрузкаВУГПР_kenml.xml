@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalDataProcessor uuid="8eeb4c60-7dca-44cf-b816-22b3e806b062">
+	<ExternalDataProcessor uuid="c4d28bde-174d-49dd-a723-227ad9119aa1">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>d9af9cbd-a2e8-4ac1-ab85-0e9d21af7f7a</xr:ObjectId>
+				<xr:ObjectId>94f18d94-58bf-4046-bbba-3db36f71085e</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.BI_ЗагрузкаВУГПР_kenml" category="Object">
-				<xr:TypeId>83c081c4-f7ac-4466-aafc-0fb3ec1ee420</xr:TypeId>
-				<xr:ValueId>40191f2b-95c2-46f6-b19f-2dbdc05a24b4</xr:ValueId>
+				<xr:TypeId>d4e284fd-53dc-4ac5-9280-0566cb835001</xr:TypeId>
+				<xr:ValueId>d4301028-5830-407a-a2b6-e87bc5b7f6c6</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -16,15 +16,15 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузка из kenml</v8:content>
+					<v8:content>Загрузка из kenml (2.3.2)</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>v2.3.2</Comment>
+			<Comment/>
 			<DefaultForm>ExternalDataProcessor.BI_ЗагрузкаВУГПР_kenml.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="3afb5ce6-743d-4ef2-819b-e53206bee385">
+			<Attribute uuid="38951e6a-a779-45aa-a5f6-e4ece3da5866">
 				<Properties>
 					<Name>Проект</Name>
 					<Synonym>
