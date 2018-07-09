@@ -1,0 +1,1691 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мастер формирования УГПР из xml</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыбратьФайл" id="218">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ВыбратьФайл</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьФайлРасширеннаяПодсказка" id="222"/>
+			</Button>
+			<Button name="ФормаПеренестивУГПР" id="40">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеренестивУГПР</CommandName>
+				<ExtendedTooltip name="ФормаПеренестивУГПРРасширеннаяПодсказка" id="41"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастроек" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<InputField name="Проект" id="42">
+					<DataPath>Объект.Проект</DataPath>
+					<ContextMenu name="ПроектКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="44"/>
+					<Events>
+						<Event name="OnChange">ПроектПриИзменении</Event>
+					</Events>
+				</InputField>
+				<RadioButtonField name="Формат" id="200">
+					<DataPath>флФорматСметы</DataPath>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>2018</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>5.5.6</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>5.5.1</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ФорматКонтекстноеМеню" id="201"/>
+					<ExtendedTooltip name="ФорматРасширеннаяПодсказка" id="202"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="95">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="96"/>
+			<ChildItems>
+				<Page name="ГруппаДерево" id="97">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные сметы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дерево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДеревоРасширеннаяПодсказка" id="98"/>
+					<ChildItems>
+						<Table name="ДеревоРаботСметы" id="226">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>РаботыДЗ</DataPath>
+							<ContextMenu name="ДеревоРаботСметыКонтекстноеМеню" id="230"/>
+							<AutoCommandBar name="ДеревоРаботСметыКоманднаяПанель" id="264">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="РаботыДЗСвернутьВсе" id="45">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.СвернутьВсе</CommandName>
+										<ExtendedTooltip name="РаботыДЗСвернутьВсеРасширеннаяПодсказка" id="46"/>
+									</Button>
+									<Button name="РаботыДЗРазвернутьВсе" id="47">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.РазвернутьВсе</CommandName>
+										<ExtendedTooltip name="РаботыДЗРазвернутьВсеРасширеннаяПодсказка" id="48"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоРаботСметыРасширеннаяПодсказка" id="261"/>
+							<SearchStringAddition name="ДеревоРаботСметыСтрокаПоиска" id="258">
+								<AdditionSource>
+									<Item>ДеревоРаботСметы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРаботСметыСтрокаПоискаКонтекстноеМеню" id="255"/>
+								<ExtendedTooltip name="ДеревоРаботСметыСтрокаПоискаРасширеннаяПодсказка" id="252"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоРаботСметыСостояниеПросмотра" id="249">
+								<AdditionSource>
+									<Item>ДеревоРаботСметы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРаботСметыСостояниеПросмотраКонтекстноеМеню" id="246"/>
+								<ExtendedTooltip name="ДеревоРаботСметыСостояниеПросмотраРасширеннаяПодсказка" id="243"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоРаботСметыУправлениеПоиском" id="240">
+								<AdditionSource>
+									<Item>ДеревоРаботСметы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРаботСметыУправлениеПоискомКонтекстноеМеню" id="237"/>
+								<ExtendedTooltip name="ДеревоРаботСметыУправлениеПоискомРасширеннаяПодсказка" id="234"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateCell">ДеревоРаботСметыПриАктивизацииЯчейки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДеревоРаботСметыНазваниеЭлементаСметы" id="275">
+									<DataPath>РаботыДЗ.Название</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРаботСметыНазваниеЭлементаСметыКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="ДеревоРаботСметыНазваниеЭлементаСметыРасширеннаяПодсказка" id="273"/>
+								</InputField>
+								<InputField name="ДеревоРаботСметыКодWBS" id="206">
+									<DataPath>РаботыДЗ.КодWBS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>9</MaxWidth>
+									<ContextMenu name="ДеревоРаботСметыКодWBSКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ДеревоРаботСметыКодWBSРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<ColumnGroup name="грОбъекты1с" id="72">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр объекты1с</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр объекты1с</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="грОбъекты1сРасширеннаяПодсказка" id="73"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыВидРаботы" id="69">
+											<DataPath>РаботыДЗ.ВидРаботы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Объект 1с</v8:content>
+												</v8:item>
+											</Title>
+											<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">1/0:8d7329fe-555c-4f28-815c-7094e8c83ad5</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;&lt;Новый&gt;&gt;</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ДеревоРаботСметыВидРаботыКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ДеревоРаботСметыВидРаботыРасширеннаяПодсказка" id="71"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыНормативныйСборник" id="66">
+											<DataPath>РаботыДЗ.НормативныйСборник</DataPath>
+											<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыНормативныйСборникКонтекстноеМеню" id="67"/>
+											<ExtendedTooltip name="ДеревоРаботСметыНормативныйСборникРасширеннаяПодсказка" id="68"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="грКоды" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр коды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр коды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="грКодыРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыШифрПозиции" id="267">
+											<DataPath>РаботыДЗ.КодСНБ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>20</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыШифрПозицииКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ДеревоРаботСметыШифрПозицииРасширеннаяПодсказка" id="27"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыТип" id="271">
+											<DataPath>РаботыДЗ.Тип</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>5</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыТипКонтекстноеМеню" id="269"/>
+											<ExtendedTooltip name="ДеревоРаботСметыТипРасширеннаяПодсказка" id="268"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="грПризнакиРаботы" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр признаки работы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр признаки работы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="грПризнакиРаботыРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыВидРабот" id="31">
+											<DataPath>РаботыДЗ.ВидРабот</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыВидРаботКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="ДеревоРаботСметыВидРаботРасширеннаяПодсказка" id="33"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыВидЗатрат" id="28">
+											<DataPath>РаботыДЗ.ВидЗатрат</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>5</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыВидЗатратКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ДеревоРаботСметыВидЗатратРасширеннаяПодсказка" id="30"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="грОбъем" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр объем</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр объем</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="грОбъемРасширеннаяПодсказка" id="58"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыОбъем" id="272">
+											<DataPath>РаботыДЗ.Объем</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыОбъемКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ДеревоРаботСметыОбъемРасширеннаяПодсказка" id="270"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыИзмеритель" id="34">
+											<DataPath>РаботыДЗ.Измеритель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыИзмерительКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ДеревоРаботСметыИзмерительРасширеннаяПодсказка" id="36"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="грИдентификаторы" id="55">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр идентификаторы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр идентификаторы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="грИдентификаторыРасширеннаяПодсказка" id="56"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыКлючСвязи" id="52">
+											<DataPath>РаботыДЗ.КлючСвязи</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыКлючСвязиКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="ДеревоРаботСметыКлючСвязиРасширеннаяПодсказка" id="54"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыКлючСтроки" id="49">
+											<DataPath>РаботыДЗ.КлючСтроки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыКлючСтрокиКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ДеревоРаботСметыКлючСтрокиРасширеннаяПодсказка" id="51"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаСтоимости" id="81">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа стоимости</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа стоимости</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСтоимостиРасширеннаяПодсказка" id="82"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыНакладныеРасходы" id="83">
+											<DataPath>РаботыДЗ.НакладныеРасходы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыНакладныеРасходыКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="ДеревоРаботСметыНакладныеРасходыРасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыНакладныеРасходыРаспред" id="86">
+											<DataPath>РаботыДЗ.НакладныеРасходыРаспред</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыНакладныеРасходыРаспредКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ДеревоРаботСметыНакладныеРасходыРаспредРасширеннаяПодсказка" id="88"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаСуммы" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа суммы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа суммы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСуммыРасширеннаяПодсказка" id="128"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыСумма" id="121">
+											<DataPath>РаботыДЗ.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыСуммаКонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="ДеревоРаботСметыСуммаРасширеннаяПодсказка" id="123"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыЗМ" id="124">
+											<DataPath>РаботыДЗ.СуммаЗПМашинистов</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>12</MaxWidth>
+											<ContextMenu name="ДеревоРаботСметыЗМКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ДеревоРаботСметыЗМРасширеннаяПодсказка" id="126"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаРаботаРесурс" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа работа ресурс</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа работа ресурс</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаРаботаРесурсРасширеннаяПодсказка" id="62"/>
+									<ChildItems>
+										<CheckBoxField name="ДеревоРаботСметыЭтоРабота" id="63">
+											<DataPath>РаботыДЗ.ЭтоРабота</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Раб</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДеревоРаботСметыЭтоРаботаКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="ДеревоРаботСметыЭтоРаботаРасширеннаяПодсказка" id="65"/>
+										</CheckBoxField>
+										<CheckBoxField name="ДеревоРаботСметыРесурс" id="37">
+											<DataPath>РаботыДЗ.ЭтоРесурс</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рес</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДеревоРаботСметыРесурсКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ДеревоРаботСметыРесурсРасширеннаяПодсказка" id="39"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаПоставка" id="198">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поставка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поставка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаПоставкаРасширеннаяПодсказка" id="199"/>
+									<ChildItems>
+										<InputField name="ДеревоРаботСметыПоставка" id="183">
+											<DataPath>РаботыДЗ.Поставка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыПоставкаКонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ДеревоРаботСметыПоставкаРасширеннаяПодсказка" id="185"/>
+										</InputField>
+										<InputField name="ДеревоРаботСметыСР" id="195">
+											<DataPath>РаботыДЗ.СР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоРаботСметыСРКонтекстноеМеню" id="196"/>
+											<ExtendedTooltip name="ДеревоРаботСметыСРРасширеннаяПодсказка" id="197"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоРаботСметыСметнаяПрибыль" id="209">
+									<DataPath>РаботыДЗ.СметнаяПрибыль</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРаботСметыСметнаяПрибыльКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ДеревоРаботСметыСметнаяПрибыльРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="ДеревоРаботСметыСуммаЗП" id="212">
+									<DataPath>РаботыДЗ.СуммаЗП</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРаботСметыСуммаЗПКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ДеревоРаботСметыСуммаЗПРасширеннаяПодсказка" id="214"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelField name="ИтогоПоСмете1" id="118">
+							<DataPath>ИтогоПоСмете</DataPath>
+							<ContextMenu name="ИтогоПоСмете1КонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ИтогоПоСмете1РасширеннаяПодсказка" id="120"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРесурсы" id="129">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В т.ч. ресурсы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ресурсы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРесурсыРасширеннаяПодсказка" id="130"/>
+					<ChildItems>
+						<Table name="ТаблицаРесурсов" id="131">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблицаРесурсов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаРесурсовКонтекстноеМеню" id="132"/>
+							<AutoCommandBar name="ТаблицаРесурсовКоманднаяПанель" id="133">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаРесурсовРасширеннаяПодсказка" id="134"/>
+							<SearchStringAddition name="ТаблицаРесурсовСтрокаПоиска" id="135">
+								<AdditionSource>
+									<Item>ТаблицаРесурсов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРесурсовСтрокаПоискаКонтекстноеМеню" id="136"/>
+								<ExtendedTooltip name="ТаблицаРесурсовСтрокаПоискаРасширеннаяПодсказка" id="137"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаРесурсовСостояниеПросмотра" id="138">
+								<AdditionSource>
+									<Item>ТаблицаРесурсов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРесурсовСостояниеПросмотраКонтекстноеМеню" id="139"/>
+								<ExtendedTooltip name="ТаблицаРесурсовСостояниеПросмотраРасширеннаяПодсказка" id="140"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаРесурсовУправлениеПоиском" id="141">
+								<AdditionSource>
+									<Item>ТаблицаРесурсов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРесурсовУправлениеПоискомКонтекстноеМеню" id="142"/>
+								<ExtendedTooltip name="ТаблицаРесурсовУправлениеПоискомРасширеннаяПодсказка" id="143"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаРесурсовКодСНБ" id="162">
+									<DataPath>ТаблицаРесурсов.КодСНБ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовКодСНБКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ТаблицаРесурсовКодСНБРасширеннаяПодсказка" id="164"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовНазвание" id="144">
+									<DataPath>ТаблицаРесурсов.Название</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовНазваниеКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ТаблицаРесурсовНазваниеРасширеннаяПодсказка" id="146"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовРесурс" id="171">
+									<DataPath>ТаблицаРесурсов.Ресурс</DataPath>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ТаблицаРесурсовРесурсКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="ТаблицаРесурсовРесурсРасширеннаяПодсказка" id="173"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовИзмеритель" id="159">
+									<DataPath>ТаблицаРесурсов.Измеритель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовИзмерительКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ТаблицаРесурсовИзмерительРасширеннаяПодсказка" id="161"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовЕдиницаИзмерения" id="153">
+									<DataPath>ТаблицаРесурсов.ЕдиницаИзмерения</DataPath>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовЕдиницаИзмеренияКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ТаблицаРесурсовЕдиницаИзмеренияРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовОбъем" id="168">
+									<DataPath>ТаблицаРесурсов.Объем</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовОбъемКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ТаблицаРесурсовОбъемРасширеннаяПодсказка" id="170"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовЦена" id="192">
+									<DataPath>ТаблицаРесурсов.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>12</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовЦенаКонтекстноеМеню" id="193"/>
+									<ExtendedTooltip name="ТаблицаРесурсовЦенаРасширеннаяПодсказка" id="194"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовСумма" id="147">
+									<DataPath>ТаблицаРесурсов.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовСуммаКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ТаблицаРесурсовСуммаРасширеннаяПодсказка" id="149"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовСуммаЗПМашинистов" id="150">
+									<DataPath>ТаблицаРесурсов.СуммаЗПМашинистов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовСуммаЗПМашинистовКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ТаблицаРесурсовСуммаЗПМашинистовРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовТип" id="165">
+									<DataPath>ТаблицаРесурсов.Тип</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>4</MaxWidth>
+									<ContextMenu name="ТаблицаРесурсовТипКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ТаблицаРесурсовТипРасширеннаяПодсказка" id="167"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовПоставка" id="180">
+									<DataPath>ТаблицаРесурсов.Поставка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовПоставкаКонтекстноеМеню" id="181"/>
+									<ExtendedTooltip name="ТаблицаРесурсовПоставкаРасширеннаяПодсказка" id="182"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовКлючСтроки" id="156">
+									<DataPath>ТаблицаРесурсов.КлючСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовКлючСтрокиКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ТаблицаРесурсовКлючСтрокиРасширеннаяПодсказка" id="158"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовТипРесурса" id="189">
+									<DataPath>ТаблицаРесурсов.ТипРесурса</DataPath>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовТипРесурсаКонтекстноеМеню" id="190"/>
+									<ExtendedTooltip name="ТаблицаРесурсовТипРесурсаРасширеннаяПодсказка" id="191"/>
+								</InputField>
+								<InputField name="ТаблицаРесурсовВидРаботы" id="186">
+									<DataPath>ТаблицаРесурсов.ВидРаботы</DataPath>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРесурсовВидРаботыКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ТаблицаРесурсовВидРаботыРасширеннаяПодсказка" id="188"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПоказатели" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатели сметы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа показатели</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="104">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загружаются из файла по возможности</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="106"/>
+						</LabelDecoration>
+						<LabelField name="ВерсияГенератора" id="203">
+							<DataPath>ВерсияГенератора</DataPath>
+							<ContextMenu name="ВерсияГенератораКонтекстноеМеню" id="204"/>
+							<ExtendedTooltip name="ВерсияГенератораРасширеннаяПодсказка" id="205"/>
+						</LabelField>
+						<LabelField name="ШифрСметы" id="215">
+							<DataPath>ШифрСметы</DataPath>
+							<ContextMenu name="ШифрСметыКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="ШифрСметыРасширеннаяПодсказка" id="217"/>
+						</LabelField>
+						<InputField name="ПоказательСП" id="92">
+							<DataPath>ПоказательСП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сметная прибыль, %</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПоказательСПКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ПоказательСПРасширеннаяПодсказка" id="94"/>
+						</InputField>
+						<InputField name="ПоказательНК2" id="101">
+							<DataPath>ПоказательНК2</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НК2, %</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПоказательНК2КонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ПоказательНК2РасширеннаяПодсказка" id="103"/>
+						</InputField>
+						<InputField name="ИтогоПоСмете" id="107">
+							<DataPath>ИтогоПоСмете</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Итого по смете, в валюте сметы</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИтогоПоСметеКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ИтогоПоСметеРасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<UsualGroup name="Отладочные" id="110">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отладочные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отладочные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ОтладочныеРасширеннаяПодсказка" id="111"/>
+							<ChildItems>
+								<CheckBoxField name="БезРесурсов" id="74">
+									<DataPath>БезРесурсов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загружать без ресурсов</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БезРесурсовКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="БезРесурсовРасширеннаяПодсказка" id="76"/>
+								</CheckBoxField>
+								<CheckBoxField name="АвтосозданиеWBS1c" id="112">
+									<DataPath>АвтосозданиеWBS1c</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтосозданиеWBS1cКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="АвтосозданиеWBS1cРасширеннаяПодсказка" id="114"/>
+								</CheckBoxField>
+								<CheckBoxField name="АвтозаполнениеНормативныхСборников" id="115">
+									<DataPath>АвтозаполнениеНормативныхСборников</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтозаполнениеНормативныхСборниковКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="АвтозаполнениеНормативныхСборниковРасширеннаяПодсказка" id="117"/>
+								</CheckBoxField>
+								<CheckBoxField name="АвтосозданиеНедостающихРесурсов" id="174">
+									<DataPath>АвтосозданиеНедостающихРесурсов</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтосозданиеНедостающихРесурсовКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="АвтосозданиеНедостающихРесурсовРасширеннаяПодсказка" id="176"/>
+								</CheckBoxField>
+								<InputField name="РодительСсылка" id="177">
+									<DataPath>РодительСсылка</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="РодительСсылкаКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="РодительСсылкаРасширеннаяПодсказка" id="179"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="219">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.BI_ЗагрузкаВУГПР_kenml</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РаботыДЗ" id="223">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работы ДЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Название" id="220">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название элемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Объем" id="224">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объем</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>8</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="231">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодСНБ" id="265">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код СНБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидЗатрат" id="262">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид затрат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидРабот" id="259">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид работ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Измеритель" id="256">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Измеритель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоРесурс" id="253">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это ресурс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КлючСтроки" id="250">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Fixed</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючСвязи" id="247">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ связи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Fixed</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоРабота" id="244">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это работа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидРаботы" id="241">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НормативныйСборник" id="238">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нормативный сборник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕдиницаИзмерения" id="235">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единица измерения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакладныеРасходы" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НР 1 уровня</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакладныеРасходыРаспред" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НР 2 уровня</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СметнаяПрибыль" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сметная прибыль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаЗПМашинистов" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в т.ч. ЗМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставка" id="227">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НормаРасхода" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма расхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>25</v8:Digits>
+							<v8:FractionDigits>10</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>17</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СР" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СР</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодWBS" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код WBS</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаЗП" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В т.ч. сумма ЗП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="БезРесурсов" id="228">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказательСП" id="232">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель СП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказательНК2" id="266">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель НК 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Составил" id="263">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Составил</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПоСмете" id="260">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого по смете, в валюте сметы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтосозданиеWBS1c" id="257">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автосоздание WBS объектов 1c при загрузке из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтозаполнениеНормативныхСборников" id="254">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автозаполнение нормативных сборников при загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаРесурсов" id="251">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Название" id="221">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название элемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="225">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаЗПМашинистов" id="229">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в т.ч. ЗМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕдиницаИзмерения" id="233">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед. изм. 1с</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючСтроки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Fixed</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Измеритель" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Измеритель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодСНБ" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код СНБ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Объем" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объем</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>16</v8:Digits>
+							<v8:FractionDigits>8</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ресурс" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ресурс  в 1с</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставка" id="248">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидРаботы" id="245">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипРесурса" id="242">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип ресурса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НормаРасхода" id="239">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма расхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="236">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>17</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АвтосозданиеНедостающихРесурсов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автосоздание недостающих ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РодительСсылка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка для ресурсов проекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="флФорматСметы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияГенератора" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия генератора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШифрСметы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифр сметы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестивУГПР" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать УГПР</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенестив УГПР</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестивУГПР</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СвернутьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазвернутьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
