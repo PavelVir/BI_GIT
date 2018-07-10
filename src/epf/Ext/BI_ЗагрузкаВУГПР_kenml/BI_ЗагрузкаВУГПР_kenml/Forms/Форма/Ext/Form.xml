@@ -50,21 +50,6 @@
 						<Event name="OnChange">ПроектПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CheckBoxField name="АвтопомещениеРесурсовВРаботы" id="218">
-					<DataPath>АвтопомещениеРесурсовВРаботы</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Укажите до загрузки из файла</v8:content>
-						</v8:item>
-					</ToolTip>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="АвтопомещениеРесурсовВРаботыКонтекстноеМеню" id="219"/>
-					<ExtendedTooltip name="АвтопомещениеРесурсовВРаботыРасширеннаяПодсказка" id="220"/>
-					<Events>
-						<Event name="OnChange">АвтопомещениеРесурсовВРаботыПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
 				<RadioButtonField name="Формат" id="200">
 					<DataPath>флФорматСметы</DataPath>
 					<ToolTip>
@@ -718,6 +703,21 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="100"/>
 					<ChildItems>
+						<CheckBoxField name="АвтопомещениеРесурсовВРаботы" id="218">
+							<DataPath>АвтопомещениеРесурсовВРаботы</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите до загрузки из файла, позволяет поместить ресурсы указанные как позиции сметы в предыдущую работу.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="АвтопомещениеРесурсовВРаботыКонтекстноеМеню" id="219"/>
+							<ExtendedTooltip name="АвтопомещениеРесурсовВРаботыРасширеннаяПодсказка" id="220"/>
+							<Events>
+								<Event name="OnChange">АвтопомещениеРесурсовВРаботыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 						<LabelDecoration name="Декорация1" id="104">
 							<Title formatted="false">
 								<v8:item>
@@ -738,7 +738,7 @@
 							<ContextMenu name="ШифрСметыКонтекстноеМеню" id="216"/>
 							<ExtendedTooltip name="ШифрСметыРасширеннаяПодсказка" id="217"/>
 						</LabelField>
-						<InputField name="ПоказательСП" id="92">
+						<LabelField name="ПоказательСП" id="92">
 							<DataPath>ПоказательСП</DataPath>
 							<Title>
 								<v8:item>
@@ -748,19 +748,19 @@
 							</Title>
 							<ContextMenu name="ПоказательСПКонтекстноеМеню" id="93"/>
 							<ExtendedTooltip name="ПоказательСПРасширеннаяПодсказка" id="94"/>
-						</InputField>
-						<InputField name="ПоказательНК2" id="101">
+						</LabelField>
+						<LabelField name="ПоказательНК2" id="101">
 							<DataPath>ПоказательНК2</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>НК2, %</v8:content>
+									<v8:content>Накладные расходы, %</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ПоказательНК2КонтекстноеМеню" id="102"/>
 							<ExtendedTooltip name="ПоказательНК2РасширеннаяПодсказка" id="103"/>
-						</InputField>
-						<InputField name="ИтогоПоСмете" id="107">
+						</LabelField>
+						<LabelField name="ИтогоПоСмете" id="107">
 							<DataPath>ИтогоПоСмете</DataPath>
 							<Title>
 								<v8:item>
@@ -770,7 +770,7 @@
 							</Title>
 							<ContextMenu name="ИтогоПоСметеКонтекстноеМеню" id="108"/>
 							<ExtendedTooltip name="ИтогоПоСметеРасширеннаяПодсказка" id="109"/>
-						</InputField>
+						</LabelField>
 						<UsualGroup name="Отладочные" id="110">
 							<Title>
 								<v8:item>
