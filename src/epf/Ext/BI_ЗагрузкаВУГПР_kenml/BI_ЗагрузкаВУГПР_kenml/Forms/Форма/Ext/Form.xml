@@ -788,6 +788,7 @@
 							<ChildItems>
 								<CheckBoxField name="БезРесурсов" id="74">
 									<DataPath>БезРесурсов</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
