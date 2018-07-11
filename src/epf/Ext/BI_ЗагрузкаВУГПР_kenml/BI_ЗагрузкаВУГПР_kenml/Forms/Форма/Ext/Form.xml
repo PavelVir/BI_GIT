@@ -8,12 +8,51 @@
 	</Title>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаВыбратьФайл" id="221">
+			<Button name="ФормаВыбратьФайл" id="227">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ВыбратьФайл</CommandName>
-				<ExtendedTooltip name="ФормаВыбратьФайлРасширеннаяПодсказка" id="225"/>
+				<ExtendedTooltip name="ФормаВыбратьФайлРасширеннаяПодсказка" id="231"/>
 			</Button>
+			<Popup name="ВСуществующийУГПР" id="221">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Существующий УГПР</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>В существующий УГПР</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ВСуществующийУГПРРасширеннаяПодсказка" id="222"/>
+				<ChildItems>
+					<Button name="УГПР_Добавить" id="223">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УГПР_Добавить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить как ветку</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="УГПР_ДобавитьРасширеннаяПодсказка" id="224"/>
+					</Button>
+					<Button name="УГПР_Заменить" id="225">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УГПР_заменить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заменить всю структуру</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="УГПР_ЗаменитьРасширеннаяПодсказка" id="226"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="ФормаПеренестивУГПР" id="40">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПеренестивУГПР</CommandName>
@@ -123,14 +162,14 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаДеревоРасширеннаяПодсказка" id="98"/>
 					<ChildItems>
-						<Table name="ДеревоРаботСметы" id="229">
+						<Table name="ДеревоРаботСметы" id="235">
 							<Representation>Tree</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>РаботыДЗ</DataPath>
-							<ContextMenu name="ДеревоРаботСметыКонтекстноеМеню" id="233"/>
-							<AutoCommandBar name="ДеревоРаботСметыКоманднаяПанель" id="264">
+							<ContextMenu name="ДеревоРаботСметыКонтекстноеМеню" id="239"/>
+							<AutoCommandBar name="ДеревоРаботСметыКоманднаяПанель" id="243">
 								<Autofill>false</Autofill>
 								<ChildItems>
 									<Button name="РаботыДЗСвернутьВсе" id="45">
@@ -147,40 +186,40 @@
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ДеревоРаботСметыРасширеннаяПодсказка" id="261"/>
-							<SearchStringAddition name="ДеревоРаботСметыСтрокаПоиска" id="258">
+							<ExtendedTooltip name="ДеревоРаботСметыРасширеннаяПодсказка" id="247"/>
+							<SearchStringAddition name="ДеревоРаботСметыСтрокаПоиска" id="275">
 								<AdditionSource>
 									<Item>ДеревоРаботСметы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоРаботСметыСтрокаПоискаКонтекстноеМеню" id="255"/>
-								<ExtendedTooltip name="ДеревоРаботСметыСтрокаПоискаРасширеннаяПодсказка" id="267"/>
+								<ContextMenu name="ДеревоРаботСметыСтрокаПоискаКонтекстноеМеню" id="272"/>
+								<ExtendedTooltip name="ДеревоРаботСметыСтрокаПоискаРасширеннаяПодсказка" id="269"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ДеревоРаботСметыСостояниеПросмотра" id="249">
+							<ViewStatusAddition name="ДеревоРаботСметыСостояниеПросмотра" id="266">
 								<AdditionSource>
 									<Item>ДеревоРаботСметы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоРаботСметыСостояниеПросмотраКонтекстноеМеню" id="252"/>
-								<ExtendedTooltip name="ДеревоРаботСметыСостояниеПросмотраРасширеннаяПодсказка" id="246"/>
+								<ContextMenu name="ДеревоРаботСметыСостояниеПросмотраКонтекстноеМеню" id="263"/>
+								<ExtendedTooltip name="ДеревоРаботСметыСостояниеПросмотраРасширеннаяПодсказка" id="260"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ДеревоРаботСметыУправлениеПоиском" id="243">
+							<SearchControlAddition name="ДеревоРаботСметыУправлениеПоиском" id="257">
 								<AdditionSource>
 									<Item>ДеревоРаботСметы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоРаботСметыУправлениеПоискомКонтекстноеМеню" id="240"/>
-								<ExtendedTooltip name="ДеревоРаботСметыУправлениеПоискомРасширеннаяПодсказка" id="237"/>
+								<ContextMenu name="ДеревоРаботСметыУправлениеПоискомКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="ДеревоРаботСметыУправлениеПоискомРасширеннаяПодсказка" id="251"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="OnActivateCell">ДеревоРаботСметыПриАктивизацииЯчейки</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="ДеревоРаботСметыНазваниеЭлементаСметы" id="270">
+								<InputField name="ДеревоРаботСметыНазваниеЭлементаСметы" id="278">
 									<DataPath>РаботыДЗ.Название</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоРаботСметыНазваниеЭлементаСметыКонтекстноеМеню" id="281"/>
-									<ExtendedTooltip name="ДеревоРаботСметыНазваниеЭлементаСметыРасширеннаяПодсказка" id="280"/>
+									<ContextMenu name="ДеревоРаботСметыНазваниеЭлементаСметыКонтекстноеМеню" id="289"/>
+									<ExtendedTooltip name="ДеревоРаботСметыНазваниеЭлементаСметыРасширеннаяПодсказка" id="288"/>
 								</InputField>
 								<InputField name="ДеревоРаботСметыКодWBS" id="206">
 									<DataPath>РаботыДЗ.КодWBS</DataPath>
@@ -256,21 +295,21 @@
 									</ToolTip>
 									<ExtendedTooltip name="грКодыРасширеннаяПодсказка" id="80"/>
 									<ChildItems>
-										<InputField name="ДеревоРаботСметыШифрПозиции" id="275">
+										<InputField name="ДеревоРаботСметыШифрПозиции" id="282">
 											<DataPath>РаботыДЗ.КодСНБ</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>20</MaxWidth>
-											<ContextMenu name="ДеревоРаботСметыШифрПозицииКонтекстноеМеню" id="274"/>
-											<ExtendedTooltip name="ДеревоРаботСметыШифрПозицииРасширеннаяПодсказка" id="273"/>
+											<ContextMenu name="ДеревоРаботСметыШифрПозицииКонтекстноеМеню" id="281"/>
+											<ExtendedTooltip name="ДеревоРаботСметыШифрПозицииРасширеннаяПодсказка" id="280"/>
 										</InputField>
-										<InputField name="ДеревоРаботСметыТип" id="276">
+										<InputField name="ДеревоРаботСметыТип" id="284">
 											<DataPath>РаботыДЗ.Тип</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>5</MaxWidth>
-											<ContextMenu name="ДеревоРаботСметыТипКонтекстноеМеню" id="277"/>
-											<ExtendedTooltip name="ДеревоРаботСметыТипРасширеннаяПодсказка" id="272"/>
+											<ContextMenu name="ДеревоРаботСметыТипКонтекстноеМеню" id="285"/>
+											<ExtendedTooltip name="ДеревоРаботСметыТипРасширеннаяПодсказка" id="283"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -322,11 +361,11 @@
 									</ToolTip>
 									<ExtendedTooltip name="грОбъемРасширеннаяПодсказка" id="58"/>
 									<ChildItems>
-										<InputField name="ДеревоРаботСметыОбъем" id="279">
+										<InputField name="ДеревоРаботСметыОбъем" id="287">
 											<DataPath>РаботыДЗ.Объем</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ДеревоРаботСметыОбъемКонтекстноеМеню" id="278"/>
-											<ExtendedTooltip name="ДеревоРаботСметыОбъемРасширеннаяПодсказка" id="282"/>
+											<ContextMenu name="ДеревоРаботСметыОбъемКонтекстноеМеню" id="286"/>
+											<ExtendedTooltip name="ДеревоРаботСметыОбъемРасширеннаяПодсказка" id="290"/>
 										</InputField>
 										<InputField name="ДеревоРаботСметыИзмеритель" id="34">
 											<DataPath>РаботыДЗ.Измеритель</DataPath>
@@ -831,13 +870,13 @@
 		</Pages>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Объект" id="222">
+		<Attribute name="Объект" id="228">
 			<Type>
 				<v8:Type>cfg:ExternalDataProcessorObject.BI_ЗагрузкаВУГПР_kenml</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="РаботыДЗ" id="226">
+		<Attribute name="РаботыДЗ" id="232">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -848,7 +887,7 @@
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="Название" id="223">
+				<Column name="Название" id="229">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -863,7 +902,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Объем" id="227">
+				<Column name="Объем" id="233">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -879,7 +918,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="Тип" id="234">
+				<Column name="Тип" id="240">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -894,7 +933,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КодСНБ" id="265">
+				<Column name="КодСНБ" id="244">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -909,7 +948,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ВидЗатрат" id="262">
+				<Column name="ВидЗатрат" id="248">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -924,7 +963,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ВидРабот" id="259">
+				<Column name="ВидРабот" id="276">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -939,7 +978,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Измеритель" id="256">
+				<Column name="Измеритель" id="273">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -954,7 +993,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЭтоРесурс" id="268">
+				<Column name="ЭтоРесурс" id="270">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -965,7 +1004,7 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="КлючСтроки" id="250">
+				<Column name="КлючСтроки" id="267">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -980,7 +1019,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КлючСвязи" id="253">
+				<Column name="КлючСвязи" id="264">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -995,7 +1034,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЭтоРабота" id="247">
+				<Column name="ЭтоРабота" id="261">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1006,7 +1045,7 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="ВидРаботы" id="244">
+				<Column name="ВидРаботы" id="258">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1021,7 +1060,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="НормативныйСборник" id="241">
+				<Column name="НормативныйСборник" id="255">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1036,7 +1075,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЕдиницаИзмерения" id="238">
+				<Column name="ЕдиницаИзмерения" id="252">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1051,7 +1090,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="НакладныеРасходы" id="271">
+				<Column name="НакладныеРасходы" id="279">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1131,7 +1170,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="Поставка" id="230">
+				<Column name="Поставка" id="236">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1258,7 +1297,7 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="БезРесурсов" id="231">
+		<Attribute name="БезРесурсов" id="237">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1269,7 +1308,7 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ПоказательСП" id="235">
+		<Attribute name="ПоказательСП" id="241">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1285,7 +1324,7 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПоказательНК2" id="266">
+		<Attribute name="ПоказательНК2" id="245">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1301,7 +1340,7 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="Составил" id="263">
+		<Attribute name="Составил" id="249">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1316,7 +1355,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ИтогоПоСмете" id="260">
+		<Attribute name="ИтогоПоСмете" id="277">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1332,7 +1371,7 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="АвтосозданиеWBS1c" id="257">
+		<Attribute name="АвтосозданиеWBS1c" id="274">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1343,7 +1382,7 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="АвтозаполнениеНормативныхСборников" id="269">
+		<Attribute name="АвтозаполнениеНормативныхСборников" id="271">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1354,7 +1393,7 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ТаблицаРесурсов" id="251">
+		<Attribute name="ТаблицаРесурсов" id="268">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1365,7 +1404,7 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="Название" id="224">
+				<Column name="Название" id="230">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1380,7 +1419,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Сумма" id="228">
+				<Column name="Сумма" id="234">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1396,7 +1435,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="СуммаЗПМашинистов" id="232">
+				<Column name="СуммаЗПМашинистов" id="238">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1412,7 +1451,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЕдиницаИзмерения" id="236">
+				<Column name="ЕдиницаИзмерения" id="242">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1427,7 +1466,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КлючСтроки" id="5">
+				<Column name="КлючСтроки" id="246">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1442,7 +1481,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Измеритель" id="6">
+				<Column name="Измеритель" id="250">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1518,7 +1557,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Поставка" id="254">
+				<Column name="Поставка" id="265">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1533,7 +1572,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ВидРаботы" id="248">
+				<Column name="ВидРаботы" id="262">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1548,7 +1587,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ТипРесурса" id="245">
+				<Column name="ТипРесурса" id="259">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1563,7 +1602,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="НормаРасхода" id="242">
+				<Column name="НормаРасхода" id="256">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1579,7 +1618,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="Цена" id="239">
+				<Column name="Цена" id="253">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1749,6 +1788,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УГПР_Добавить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УГПР добавить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УГПР_заменить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УГПР заменить</v8:content>
+				</v8:item>
+			</ToolTip>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
