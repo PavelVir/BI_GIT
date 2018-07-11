@@ -70,7 +70,7 @@
 										<v8:content>2018</v8:content>
 									</v8:item>
 								</Presentation>
-								<Value xsi:type="xs:decimal">2</Value>
+								<Value xsi:type="xs:decimal">2018</Value>
 							</xr:Value>
 						</xr:Item>
 						<xr:Item>
@@ -83,7 +83,7 @@
 										<v8:content>5.5.6</v8:content>
 									</v8:item>
 								</Presentation>
-								<Value xsi:type="xs:decimal">0</Value>
+								<Value xsi:type="xs:decimal">556</Value>
 							</xr:Value>
 						</xr:Item>
 						<xr:Item>
@@ -96,7 +96,7 @@
 										<v8:content>5.5.1</v8:content>
 									</v8:item>
 								</Presentation>
-								<Value xsi:type="xs:decimal">1</Value>
+								<Value xsi:type="xs:decimal">551</Value>
 							</xr:Value>
 						</xr:Item>
 					</ChoiceList>
