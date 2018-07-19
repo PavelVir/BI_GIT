@@ -1,6 +1,7 @@
 ﻿#language: ru
 @tree
 @exportscenarios
+@IgnoreOnCIMainBuild
 
 Функционал: Я убираю группировки в текущем списке
 

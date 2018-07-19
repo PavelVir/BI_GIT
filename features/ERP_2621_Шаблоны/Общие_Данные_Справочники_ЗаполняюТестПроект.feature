@@ -1,6 +1,7 @@
 ﻿#language: ru
 @tree
 @exportscenarios
+@IgnoreOnCIMainBuild
 
 Функционал: Я создаю тестовый проект для использования в тесте
 
