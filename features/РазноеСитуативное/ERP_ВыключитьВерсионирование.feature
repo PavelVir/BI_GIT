@@ -1,6 +1,7 @@
 ﻿#language: ru
 @tree
 @exportscenarios
+@IgnoreOnCIMainBuild
 
 Функционал: Я выключаю Версионирование для всего
 
