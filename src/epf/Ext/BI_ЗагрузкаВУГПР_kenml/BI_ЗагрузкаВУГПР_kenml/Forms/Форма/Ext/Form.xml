@@ -2019,6 +2019,7 @@
 					<v8:content>УГПР добавить</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>УГПР_Добавить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УГПР_заменить" id="6">
@@ -2034,6 +2035,7 @@
 					<v8:content>УГПР заменить</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>УГПР_заменить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
