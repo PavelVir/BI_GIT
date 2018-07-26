@@ -51,6 +51,7 @@
 			<ChildItems>
 				<InputField name="Проект" id="16">
 					<DataPath>Проект</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ПроектКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="18"/>
 					<Events>

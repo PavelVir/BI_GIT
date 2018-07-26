@@ -67,6 +67,13 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ИНАГРО_УГПРРаботы.Версия КАК Версия,
@@ -96,7 +103,8 @@
 					ТОГДА "ПодКонструктив (класс)"
 				ИНАЧЕ ""
 			КОНЕЦ
-	КОНЕЦ КАК ВидОбъекта
+	КОНЕЦ КАК ВидОбъекта,
+	ИНАГРО_УГПРРаботы.Проект КАК Проект
 {ВЫБРАТЬ
 	Версия.*,
 	КлючСтроки,
@@ -104,13 +112,17 @@
 	ВидРаботы.*,
 	КодWBS,
 	НомерВСтруктуре,
-	ШифрПозицииНорматива}
+	ШифрПозицииНорматива,
+	Проект.*}
 ИЗ
 	РегистрСведений.ИНАГРО_УГПРРаботы КАК ИНАГРО_УГПРРаботы
 ГДЕ
 	ИНАГРО_УГПРРаботы.Версия.ВидВерсии = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидВерсии.Рабочая)
+	И ИНАГРО_УГПРРаботы.Проект = &amp;Проект
 {ГДЕ
-	ИНАГРО_УГПРРаботы.Версия.*}</query>
+	ИНАГРО_УГПРРаботы.Версия.*,
+	ИНАГРО_УГПРРаботы.Проект.*,
+	ИНАГРО_УГПРРаботы.КлючСтроки}</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetUnion">
 		<name>ДаныеПоМашинам</name>
@@ -358,7 +370,7 @@
 	ИНАГРО_ПланПотребностейВМашинахСрезПоследних.Проект,
 	"Работа" КАК ВидОбъекта
 ИЗ
-	РегистрСведений.ИНАГРО_ПланПотребностейВМашинах.СрезПоследних КАК ИНАГРО_ПланПотребностейВМашинахСрезПоследних
+	РегистрСведений.ИНАГРО_ПланПотребностейВМашинах.СрезПоследних(, Проект = &amp;Проект) КАК ИНАГРО_ПланПотребностейВМашинахСрезПоследних
 ГДЕ
 	ИНАГРО_ПланПотребностейВМашинахСрезПоследних.ДатаПлана МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода</query>
 		</item>
@@ -475,7 +487,7 @@
 	ИНАГРО_УГПРРаботы.ВидРаботы,
 	ИНАГРО_УчетРаботыТехники.Ресурс.ЕдиницаИзмерения КАК ЕдиницаИзмерения
 ИЗ
-	РегистрНакопления.ИНАГРО_УчетРаботыТехники.Обороты(, , Авто, ) КАК ИНАГРО_УчетРаботыТехники
+	РегистрНакопления.ИНАГРО_УчетРаботыТехники.Обороты(, , Авто, Проект = &amp;Проект) КАК ИНАГРО_УчетРаботыТехники
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_УГПРРаботы КАК ИНАГРО_УГПРРаботы
 		ПО ИНАГРО_УчетРаботыТехники.КлючСтроки = ИНАГРО_УГПРРаботы.КлючСтроки
 ГДЕ
@@ -560,6 +572,7 @@
 	РегистрСведений.ИНАГРО_УГПРРесурсыМашинные КАК ИНАГРО_УГПРМашиныИМеханизмы
 ГДЕ
 	ИНАГРО_УГПРМашиныИМеханизмы.Версия.ВидВерсии = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидВерсии.Рабочая)
+	И ИНАГРО_УГПРМашиныИМеханизмы.Проект = &amp;Проект
 
 СГРУППИРОВАТЬ ПО
 	ИНАГРО_УГПРМашиныИМеханизмы.Проект,
@@ -592,9 +605,12 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ИНАГРО_ЗавершенныеРаботы.КлючСтроки, "Завершена" КАК СтатусРаботы
+	ИНАГРО_ЗавершенныеРаботы.КлючСтроки,
+	"Завершена" КАК СтатусРаботы
 ИЗ
-	РегистрСведений.ИНАГРО_ЗавершенныеРаботы КАК ИНАГРО_ЗавершенныеРаботы</query>
+	РегистрСведений.ИНАГРО_ЗавершенныеРаботы КАК ИНАГРО_ЗавершенныеРаботы
+ГДЕ
+	ИНАГРО_ЗавершенныеРаботы.Проект = &amp;Проект</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>ТаблицаИерархии</sourceDataSet>
@@ -795,6 +811,23 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
 		<name>КонецПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -812,21 +845,17 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>НачалоПериода</name>
+		<name>Проект</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Начало периода</v8:content>
+				<v8:content>Проект</v8:content>
 			</v8:item>
 		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -932,17 +961,22 @@
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>cdc74f65-7d3e-4d0d-baea-ac0c904d399c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>КонецПериода</dcscor:parameter>
 					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>3d7555d7-9db7-4736-947a-677365e9444e</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>cdc74f65-7d3e-4d0d-baea-ac0c904d399c</dcsset:userSettingID>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Проекты.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>c41bc9c9-d95d-46ca-97ed-f7d782fb1ca1</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
