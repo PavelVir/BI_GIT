@@ -51,6 +51,7 @@
 							<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="1318"/>
 							<Events>
 								<Event name="OnChange">ПроектПриИзменении</Event>
+								<Event name="StartChoice">ПроектНачалоВыбора</Event>
 							</Events>
 						</InputField>
 						<InputField name="Организация" id="248">
@@ -163,6 +164,7 @@
 							<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="226"/>
 							<Events>
 								<Event name="OnChange">ИсполнительПриИзменении</Event>
+								<Event name="StartChoice">ИсполнительНачалоВыбора</Event>
 							</Events>
 						</InputField>
 					</ChildItems>
