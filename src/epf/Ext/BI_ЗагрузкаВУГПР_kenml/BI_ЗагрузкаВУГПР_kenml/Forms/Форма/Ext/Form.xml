@@ -295,13 +295,13 @@
 									</ToolTip>
 									<ExtendedTooltip name="грКодыРасширеннаяПодсказка" id="80"/>
 									<ChildItems>
-										<InputField name="ДеревоРаботСметыШифрПозиции" id="360">
+										<InputField name="ДеревоРаботСметыШифрПозиции" id="369">
 											<DataPath>РаботыДЗ.КодСНБ</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>20</MaxWidth>
-											<ContextMenu name="ДеревоРаботСметыШифрПозицииКонтекстноеМеню" id="370"/>
-											<ExtendedTooltip name="ДеревоРаботСметыШифрПозицииРасширеннаяПодсказка" id="369"/>
+											<ContextMenu name="ДеревоРаботСметыШифрПозицииКонтекстноеМеню" id="368"/>
+											<ExtendedTooltip name="ДеревоРаботСметыШифрПозицииРасширеннаяПодсказка" id="367"/>
 										</InputField>
 										<InputField name="ДеревоРаботСметыТип" id="354">
 											<DataPath>РаботыДЗ.Тип</DataPath>
@@ -328,21 +328,21 @@
 									</ToolTip>
 									<ExtendedTooltip name="грПризнакиРаботыРасширеннаяПодсказка" id="60"/>
 									<ChildItems>
-										<InputField name="ДеревоРаботСметыВидРабот" id="365">
+										<InputField name="ДеревоРаботСметыВидРабот" id="360">
 											<DataPath>РаботыДЗ.ВидРабот</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>10</MaxWidth>
-											<ContextMenu name="ДеревоРаботСметыВидРаботКонтекстноеМеню" id="362"/>
-											<ExtendedTooltip name="ДеревоРаботСметыВидРаботРасширеннаяПодсказка" id="364"/>
+											<ContextMenu name="ДеревоРаботСметыВидРаботКонтекстноеМеню" id="363"/>
+											<ExtendedTooltip name="ДеревоРаботСметыВидРаботРасширеннаяПодсказка" id="362"/>
 										</InputField>
-										<InputField name="ДеревоРаботСметыВидЗатрат" id="368">
+										<InputField name="ДеревоРаботСметыВидЗатрат" id="366">
 											<DataPath>РаботыДЗ.ВидЗатрат</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>5</MaxWidth>
-											<ContextMenu name="ДеревоРаботСметыВидЗатратКонтекстноеМеню" id="367"/>
-											<ExtendedTooltip name="ДеревоРаботСметыВидЗатратРасширеннаяПодсказка" id="366"/>
+											<ContextMenu name="ДеревоРаботСметыВидЗатратКонтекстноеМеню" id="365"/>
+											<ExtendedTooltip name="ДеревоРаботСметыВидЗатратРасширеннаяПодсказка" id="364"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -367,7 +367,7 @@
 											<ContextMenu name="ДеревоРаботСметыОбъемКонтекстноеМеню" id="350"/>
 											<ExtendedTooltip name="ДеревоРаботСметыОбъемРасширеннаяПодсказка" id="352"/>
 										</InputField>
-										<InputField name="ДеревоРаботСметыИзмеритель" id="363">
+										<InputField name="ДеревоРаботСметыИзмеритель" id="361">
 											<DataPath>РаботыДЗ.Измеритель</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -518,12 +518,12 @@
 										</CheckBoxField>
 									</ChildItems>
 								</ColumnGroup>
-								<LabelField name="ДеревоРаботСметыСметнаяПрибыль" id="209">
+								<InputField name="ДеревоРаботСметыСметнаяПрибыль" id="209">
 									<DataPath>РаботыДЗ.СметнаяПрибыль</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоРаботСметыСметнаяПрибыльКонтекстноеМеню" id="210"/>
 									<ExtendedTooltip name="ДеревоРаботСметыСметнаяПрибыльРасширеннаяПодсказка" id="211"/>
-								</LabelField>
+								</InputField>
 								<LabelField name="ДеревоРаботСметыСуммаЗП" id="212">
 									<DataPath>РаботыДЗ.СуммаЗП</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -961,32 +961,12 @@
 							</ToolTip>
 							<ExtendedTooltip name="ОтладочныеРасширеннаяПодсказка" id="111"/>
 							<ChildItems>
-								<CheckBoxField name="БезРесурсов" id="74">
-									<DataPath>БезРесурсов</DataPath>
-									<Visible>false</Visible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Загружать без ресурсов</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="БезРесурсовКонтекстноеМеню" id="75"/>
-									<ExtendedTooltip name="БезРесурсовРасширеннаяПодсказка" id="76"/>
-								</CheckBoxField>
 								<CheckBoxField name="РасчетНР1ОтРазницы" id="276">
 									<DataPath>РасчетНР1ОтРазницы</DataPath>
 									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="РасчетНР1ОтРазницыКонтекстноеМеню" id="277"/>
 									<ExtendedTooltip name="РасчетНР1ОтРазницыРасширеннаяПодсказка" id="278"/>
-								</CheckBoxField>
-								<CheckBoxField name="НеОкруглять" id="279">
-									<DataPath>НеОкруглять</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="НеОкруглятьКонтекстноеМеню" id="280"/>
-									<ExtendedTooltip name="НеОкруглятьРасширеннаяПодсказка" id="281"/>
 								</CheckBoxField>
 								<CheckBoxField name="АвтосозданиеWBS1c" id="112">
 									<DataPath>АвтосозданиеWBS1c</DataPath>
@@ -1416,7 +1396,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="СуммаЗП" id="361">
+				<Column name="СуммаЗП" id="25">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2122,17 +2102,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Расчет НР1 от разницы между общей суммой работы и ресурсами (вместо процента указанного в позиции)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="НеОкруглять" id="25">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Не округлять</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
