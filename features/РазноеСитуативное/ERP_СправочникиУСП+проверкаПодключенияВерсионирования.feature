@@ -1,5 +1,6 @@
 ﻿#language: ru
 @tree
+@IgnoreOnCIMainBuild
 
 Функционал: Я проверяю форму Настройки и справочники УСП
 
