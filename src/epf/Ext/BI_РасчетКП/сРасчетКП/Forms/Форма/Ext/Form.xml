@@ -1,15 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаЗаполнить" id="44">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Заполнить</CommandName>
-				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="45"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -56,6 +51,77 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПараметровРасчета" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров расчета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров расчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметровРасчетаРасширеннаяПодсказка" id="134"/>
+			<ChildItems>
+				<InputField name="ВариантПланирования" id="130">
+					<DataPath>ВариантПланирования</DataPath>
+					<Width>20</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>От даты начала</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>От даты окончания</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантПланированияКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ВариантПланированияРасширеннаяПодсказка" id="132"/>
+					<Events>
+						<Event name="OnChange">ВариантПланированияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаНачала" id="135">
+					<DataPath>ДатаНачала</DataPath>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="137"/>
+					<Events>
+						<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаОкончания" id="138">
+					<DataPath>ДатаОкончания</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="140"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="ГруппаСтраницы" id="51">
 			<Title>
 				<v8:item>
@@ -75,7 +141,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа работы</v8:content>
+							<v8:content>Работы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -86,41 +152,49 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаРаботыРасширеннаяПодсказка" id="54"/>
 					<ChildItems>
-						<Table name="Работы" id="130">
+						<Table name="Работы" id="154">
 							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Работы</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="РаботыКонтекстноеМеню" id="134"/>
-							<AutoCommandBar name="РаботыКоманднаяПанель" id="137">
+							<ContextMenu name="РаботыКонтекстноеМеню" id="158"/>
+							<AutoCommandBar name="РаботыКоманднаяПанель" id="161">
 								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ФормаЗаполнить" id="44">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Заполнить</CommandName>
+										<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="45"/>
+									</Button>
+								</ChildItems>
 							</AutoCommandBar>
-							<ExtendedTooltip name="РаботыРасширеннаяПодсказка" id="139"/>
-							<SearchStringAddition name="РаботыСтрокаПоиска" id="141">
+							<ExtendedTooltip name="РаботыРасширеннаяПодсказка" id="163"/>
+							<SearchStringAddition name="РаботыСтрокаПоиска" id="165">
 								<AdditionSource>
 									<Item>Работы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="РаботыСтрокаПоискаКонтекстноеМеню" id="143"/>
-								<ExtendedTooltip name="РаботыСтрокаПоискаРасширеннаяПодсказка" id="148"/>
+								<ContextMenu name="РаботыСтрокаПоискаКонтекстноеМеню" id="167"/>
+								<ExtendedTooltip name="РаботыСтрокаПоискаРасширеннаяПодсказка" id="169"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="РаботыСостояниеПросмотра" id="149">
+							<ViewStatusAddition name="РаботыСостояниеПросмотра" id="171">
 								<AdditionSource>
 									<Item>Работы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="РаботыСостояниеПросмотраКонтекстноеМеню" id="146"/>
-								<ExtendedTooltip name="РаботыСостояниеПросмотраРасширеннаяПодсказка" id="145"/>
+								<ContextMenu name="РаботыСостояниеПросмотраКонтекстноеМеню" id="173"/>
+								<ExtendedTooltip name="РаботыСостояниеПросмотраРасширеннаяПодсказка" id="175"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="РаботыУправлениеПоиском" id="147">
+							<SearchControlAddition name="РаботыУправлениеПоиском" id="179">
 								<AdditionSource>
 									<Item>Работы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="РаботыУправлениеПоискомКонтекстноеМеню" id="12"/>
-								<ExtendedTooltip name="РаботыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+								<ContextMenu name="РаботыУправлениеПоискомКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="РаботыУправлениеПоискомРасширеннаяПодсказка" id="177"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<InputField name="РаботыКодWBS" id="17">
@@ -147,31 +221,83 @@
 									<ContextMenu name="РаботыПредшественникиWBSКонтекстноеМеню" id="125"/>
 									<ExtendedTooltip name="РаботыПредшественникиWBSРасширеннаяПодсказка" id="126"/>
 								</InputField>
-								<InputField name="РаботыРВН" id="29">
-									<DataPath>Работы.РВН</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="РаботыРВНКонтекстноеМеню" id="30"/>
-									<ExtendedTooltip name="РаботыРВНРасширеннаяПодсказка" id="31"/>
-								</InputField>
-								<InputField name="РаботыПВН" id="32">
-									<DataPath>Работы.ПВН</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="РаботыПВНКонтекстноеМеню" id="33"/>
-									<ExtendedTooltip name="РаботыПВНРасширеннаяПодсказка" id="34"/>
-								</InputField>
-								<InputField name="РаботыРезервВремени" id="35">
-									<DataPath>Работы.РезервВремени</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="РаботыРезервВремениКонтекстноеМеню" id="36"/>
-									<ExtendedTooltip name="РаботыРезервВремениРасширеннаяПодсказка" id="37"/>
-								</InputField>
-								<CheckBoxField name="РаботыКритическая" id="38">
-									<DataPath>Работы.Критическая</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="РаботыКритическаяКонтекстноеМеню" id="39"/>
-									<ExtendedTooltip name="РаботыКритическаяРасширеннаяПодсказка" id="40"/>
-								</CheckBoxField>
+								<ColumnGroup name="РаботыГруппаРасчетКритическогоПути" id="141">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет критического пути</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Работы группа расчет критического пути</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="РаботыГруппаРасчетКритическогоПутиРасширеннаяПодсказка" id="142"/>
+									<ChildItems>
+										<InputField name="РаботыРВН" id="29">
+											<DataPath>Работы.РВН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РаботыРВНКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="РаботыРВНРасширеннаяПодсказка" id="31"/>
+										</InputField>
+										<InputField name="РаботыПВН" id="32">
+											<DataPath>Работы.ПВН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РаботыПВНКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="РаботыПВНРасширеннаяПодсказка" id="34"/>
+										</InputField>
+										<InputField name="РаботыРезервВремени" id="35">
+											<DataPath>Работы.РезервВремени</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РаботыРезервВремениКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="РаботыРезервВремениРасширеннаяПодсказка" id="37"/>
+										</InputField>
+										<CheckBoxField name="РаботыКритическая" id="38">
+											<DataPath>Работы.Критическая</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РаботыКритическаяКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="РаботыКритическаяРасширеннаяПодсказка" id="40"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="РаботыГруппаДаты" id="146">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Даты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Работы группа даты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="РаботыГруппаДатыРасширеннаяПодсказка" id="147"/>
+									<ChildItems>
+										<InputField name="РаботыНачалоПериода" id="148">
+											<DataPath>Работы.НачалоПериода</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РаботыНачалоПериодаКонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="РаботыНачалоПериодаРасширеннаяПодсказка" id="150"/>
+										</InputField>
+										<InputField name="РаботыКонецПериода" id="151">
+											<DataPath>Работы.КонецПериода</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РаботыКонецПериодаКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="РаботыКонецПериодаРасширеннаяПодсказка" id="153"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="РаботыКоличествоВходов" id="127">
 									<DataPath>Работы.КоличествоВходов</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -184,12 +310,20 @@
 									<ContextMenu name="РаботыКоличествоВыходовКонтекстноеМеню" id="122"/>
 									<ExtendedTooltip name="РаботыКоличествоВыходовРасширеннаяПодсказка" id="123"/>
 								</InputField>
-								<InputField name="РаботыКлючСтроки" id="14">
+								<InputField name="РаботыКлючСтроки" id="178">
 									<DataPath>Работы.КлючСтроки</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="РаботыКлючСтрокиКонтекстноеМеню" id="15"/>
 									<ExtendedTooltip name="РаботыКлючСтрокиРасширеннаяПодсказка" id="16"/>
 								</InputField>
+								<CheckBoxField name="РаботыЭтоРабота" id="143">
+									<DataPath>Работы.ЭтоРабота</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РаботыЭтоРаботаКонтекстноеМеню" id="144"/>
+									<ExtendedTooltip name="РаботыЭтоРаботаРасширеннаяПодсказка" id="145"/>
+								</CheckBoxField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -198,7 +332,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа связи работ</v8:content>
+							<v8:content>Связи работ</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -313,7 +447,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа таблица связей</v8:content>
+							<v8:content>Таблица связей (отладка)</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -381,13 +515,13 @@
 		</Pages>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Объект" id="131">
+		<Attribute name="Объект" id="155">
 			<Type>
 				<v8:Type>cfg:ExternalDataProcessorObject.сРасчетКП</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="Работы" id="135">
+		<Attribute name="Работы" id="159">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -398,7 +532,7 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="КлючСтроки" id="132">
+				<Column name="КлючСтроки" id="156">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -413,7 +547,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КодWBS" id="136">
+				<Column name="КодWBS" id="160">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -428,7 +562,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ВидРаботы" id="138">
+				<Column name="ВидРаботы" id="162">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -443,7 +577,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ДлительностьДни" id="140">
+				<Column name="ДлительностьДни" id="164">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -459,11 +593,11 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="РВН" id="144">
+				<Column name="РВН" id="168">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Раннее начало</v8:content>
+							<v8:content>Раннее начало, дн</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -475,11 +609,11 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="ПВН" id="8">
+				<Column name="ПВН" id="172">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Позднее начало</v8:content>
+							<v8:content>Позднее начало, дн</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -491,11 +625,11 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="РезервВремени" id="7">
+				<Column name="РезервВремени" id="170">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Резерв времени</v8:content>
+							<v8:content>Резерв, дн</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -507,7 +641,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="Критическая" id="9">
+				<Column name="Критическая" id="174">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -518,11 +652,11 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="КоличествоВыходов" id="10">
+				<Column name="КоличествоВыходов" id="176">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Исходящих</v8:content>
+							<v8:content>Исходящих, шт</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -549,11 +683,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КоличествоВходов" id="142">
+				<Column name="КоличествоВходов" id="166">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Входящих</v8:content>
+							<v8:content>Входящих, шт</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -563,6 +697,45 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НачалоПериода" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонецПериода" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоРабота" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это работа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -640,7 +813,7 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="КлючСтроки" id="133">
+				<Column name="КлючСтроки" id="157">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -672,6 +845,110 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ВариантПланирования" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант планирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыделитьКритические" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить критические работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Работы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Работы.ЭтоРабота</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ReportGroup1BackColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Работы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Работы.Критическая</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ВыделятьКритические</v8:content>
+					</v8:item>
+				</dcsset:presentation>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="Заполнить" id="1">
