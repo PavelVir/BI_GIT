@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalDataProcessor uuid="658497d6-b3a6-45f5-8d4b-8a565ddc11f9">
+	<ExternalDataProcessor uuid="58a31000-e70a-40af-a60b-cb1c2fbf7ef1">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>ae3c2500-1191-4cc2-b90c-ef870f2102ec</xr:ObjectId>
+				<xr:ObjectId>28a6bd8c-7adc-4d30-9b4e-4f2c40afbb44</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.ИНАГРО_ЗагрузкаСметы" category="Object">
-				<xr:TypeId>3e09c774-875c-4c38-9cb4-066b3e69235c</xr:TypeId>
-				<xr:ValueId>00dca0fb-ad94-4966-a490-443dd114c455</xr:ValueId>
+				<xr:TypeId>8c06a171-be36-4546-a7b4-19058fa5faad</xr:TypeId>
+				<xr:ValueId>a767d7e1-a42c-4c29-a54f-2d4414a60c8b</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -18,13 +18,17 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Загрузка из 1С: Сметы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Download of 1C: Estimates</v8:content>
+				</v8:item>
 			</Synonym>
 			<Comment/>
 			<DefaultForm>ExternalDataProcessor.ИНАГРО_ЗагрузкаСметы.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="613967b2-7dbd-4417-9e88-101dd9c14c7c">
+			<Attribute uuid="91cfd98d-ac6c-4135-a478-edb0a3108100">
 				<Properties>
 					<Name>Смета</Name>
 					<Synonym>
@@ -62,13 +66,17 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="4d682bf7-5cc4-4d0e-9eee-626843233dbe">
+			<Attribute uuid="7a7264e5-bbd0-4e3b-a848-28a0ca3fde01">
 				<Properties>
 					<Name>Проект</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Проект</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Project</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -100,7 +108,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a9ec47af-ed21-45af-abce-4224ad83a650">
+			<Attribute uuid="7d821cfa-8d36-4608-8ccc-67c3d4ca47ae">
 				<Properties>
 					<Name>Стройка</Name>
 					<Synonym>
@@ -138,15 +146,15 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<TabularSection uuid="fad91454-3c3b-4ae6-8102-9255bc971bee">
+			<TabularSection uuid="0026b4cb-250b-43ca-9006-e9cb1642bd94">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.ПозицииСметы" category="TabularSection">
-						<xr:TypeId>8feff88f-c364-4b57-a2d5-9bbf3abca6fc</xr:TypeId>
-						<xr:ValueId>04c09378-1bf0-4546-b055-6236227ad60d</xr:ValueId>
+						<xr:TypeId>38de36ad-38a9-4c67-b541-a8c1fc2476f0</xr:TypeId>
+						<xr:ValueId>a4a6c472-f2e8-4954-bd64-8ae4a84a7959</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.ПозицииСметы" category="TabularSectionRow">
-						<xr:TypeId>e011afd3-412c-499c-a5a5-bf9d54ead308</xr:TypeId>
-						<xr:ValueId>cba91897-d742-42d0-86be-6af154f980d5</xr:ValueId>
+						<xr:TypeId>f526d078-eb91-4f66-a49f-6fa9761e5b64</xr:TypeId>
+						<xr:ValueId>7d155f2c-8fde-4e27-9427-633292a93fa7</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -190,7 +198,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="83e55d19-e8dd-41bd-a3f9-93d32cc85a2f">
+					<Attribute uuid="0fa5c755-87a1-4b7f-8b69-96f0f9336b05">
 						<Properties>
 							<Name>Ссылка</Name>
 							<Synonym>
@@ -226,7 +234,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="772167b5-b1f7-4d4f-bced-16f76d186970">
+					<Attribute uuid="11f19e94-faba-4f05-80e5-dd385046cc54">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -267,7 +275,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="1f2d4fa1-2ddc-443f-a8fd-f49726860066">
+					<Attribute uuid="8541af16-cad1-42ee-a0d6-fadca6a96f53">
 						<Properties>
 							<Name>ИДРодителя</Name>
 							<Synonym>
@@ -303,7 +311,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="753070c6-4cd6-421e-b992-604d5433da6a">
+					<Attribute uuid="21414331-f104-40a6-ab92-1cdd086811f9">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -343,7 +351,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="180c88e6-550b-47a6-8f06-efaf34749a11">
+					<Attribute uuid="0c27143c-7028-42da-a90e-5e7c74277f14">
 						<Properties>
 							<Name>НаименованиеЭлемента</Name>
 							<Synonym>
@@ -383,7 +391,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="84eef3cc-24c8-4af4-9258-61daa7706dc3">
+					<Attribute uuid="913fe5bf-8d95-417b-b43c-7cf74afd33f6">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -423,7 +431,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="745e6003-34e5-42fc-98b1-9b598ecfe283">
+					<Attribute uuid="83777939-3645-4770-b045-67a4db1d7918">
 						<Properties>
 							<Name>ВидРасценки</Name>
 							<Synonym>
@@ -463,13 +471,17 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="67573a6f-3a70-49a7-9f03-b7d44d626251">
+					<Attribute uuid="d1e19023-643c-4fe1-810b-0f9f5d887d12">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Единица измерения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Unit measurement</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -503,7 +515,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="d3c5eb74-0d52-445e-83b9-5e59ff71c885">
+					<Attribute uuid="a40284e3-e46a-48c0-9bbf-bb9fd4f6cb83">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -543,7 +555,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="88d7f15c-1562-4242-83cf-16dd676e2ace">
+					<Attribute uuid="383192d4-1ba3-4d9e-94ca-4bdbb932bf06">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -579,7 +591,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="409bb7ca-d3b5-4e26-a2bc-e3dec769cff3">
+					<Attribute uuid="e7fafda8-9b67-4d95-bea8-746b4bb8a13c">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -615,7 +627,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="f0b87a73-4145-414e-8f0d-7df8d27fbb13">
+					<Attribute uuid="8fd9ef2f-a0a7-4853-834a-b75a9d954dca">
 						<Properties>
 							<Name>Отобрано</Name>
 							<Synonym>
@@ -651,7 +663,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="3cfe2eda-c41b-45cd-86be-7ff83e351b3f">
+					<Attribute uuid="1a60d29a-cfb1-425d-bd33-dc5ba6553fee">
 						<Properties>
 							<Name>ОбщВсего</Name>
 							<Synonym>
@@ -692,17 +704,58 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="f5067236-a762-40a2-9063-3ff4217c47d2">
+						<Properties>
+							<Name>НПП</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НПП</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="5fb0c97f-04ef-4b78-a53f-576d40e96588">
+			<TabularSection uuid="6d7b2a81-9109-49ee-9b69-df80ace045c6">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.СтруктураУГПР" category="TabularSection">
-						<xr:TypeId>83b58163-d6b0-4ad4-bd73-6a07b383bad3</xr:TypeId>
-						<xr:ValueId>d77216a9-fff6-40e4-a044-e28c29539d0d</xr:ValueId>
+						<xr:TypeId>35f6c124-32c0-4c09-9139-b78060d1c46e</xr:TypeId>
+						<xr:ValueId>3f37222e-a9ff-408d-9b1e-122e61cdb431</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.СтруктураУГПР" category="TabularSectionRow">
-						<xr:TypeId>14863451-cbf4-4a3e-b4e0-36e44e07751e</xr:TypeId>
-						<xr:ValueId>1e01d9be-f045-49c1-a73c-a952e05fa0ea</xr:ValueId>
+						<xr:TypeId>cf0f1cb9-a008-49d0-8eb3-03717dc33602</xr:TypeId>
+						<xr:ValueId>75b578c1-55a9-484c-908b-25c0e2f9a0ed</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -746,7 +799,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="d0161c26-50b4-4a9c-b181-e0895022aec1">
+					<Attribute uuid="e481380c-9229-4839-8883-4614e3d52a33">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -786,7 +839,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="9e256136-359b-4798-a71b-8dd429ed4bf5">
+					<Attribute uuid="8bd93ae2-ce32-4af0-abfd-8f869b8c8088">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -826,7 +879,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="d697b4d8-97cc-4d2d-879a-66fe0a25608f">
+					<Attribute uuid="5442c6a0-b115-4eb5-a924-f859b2f95367">
 						<Properties>
 							<Name>ВидРаботы</Name>
 							<Synonym>
@@ -866,13 +919,17 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="cbfbd605-9467-4c36-9061-bd631a5227c0">
+					<Attribute uuid="ad69836a-9bf9-4f50-95ae-347b34e48a4f">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Единица измерения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Unit measurement</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -906,7 +963,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="98172a19-5035-4fa3-b37b-0b98e2a7e2ad">
+					<Attribute uuid="48d44082-1dd6-423e-b91f-9a48cbb305ee">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -947,7 +1004,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="0d1657a2-5b42-4ef2-8a5f-b8c34fdce359">
+					<Attribute uuid="cae7cf75-586d-42b1-b61b-b0ec6fd9ea05">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -983,7 +1040,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="e3f4b703-9ff9-43c7-adc1-7fe883cf9843">
+					<Attribute uuid="4957da69-1593-4ef9-9218-90c3b16c42a0">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -1019,7 +1076,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8ba002a6-93db-44a3-8c46-04be4e02e594">
+					<Attribute uuid="d3a6a476-d74c-483a-933f-d747ea7af461">
 						<Properties>
 							<Name>УДАЛИТЬОбъемРаботРаспред</Name>
 							<Synonym>
@@ -1060,7 +1117,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8c9f14ad-4418-42ef-93fd-c81e0c644d59">
+					<Attribute uuid="c2caeb60-6b3d-440b-97e3-7b0a6625fc07">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -1100,17 +1157,58 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="8f6b0947-95fc-41c4-830d-2e44b5cfc28e">
+						<Properties>
+							<Name>НПП</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НПП</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="ffd6c4c1-eff5-4657-b2a6-90bdeaaf2342">
+			<TabularSection uuid="7bde6577-bb96-4193-bae5-80dfd89254df">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.ТаблицаСоответствий" category="TabularSection">
-						<xr:TypeId>0f41ab49-4ca9-4a9e-90cd-780ccd272498</xr:TypeId>
-						<xr:ValueId>536e3d1a-2c48-4239-b75a-2080bac52937</xr:ValueId>
+						<xr:TypeId>5150b1e7-11f1-4e64-89f9-447f69d499fa</xr:TypeId>
+						<xr:ValueId>c24c8147-c5ab-4295-92e5-1147b1fdf209</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.ТаблицаСоответствий" category="TabularSectionRow">
-						<xr:TypeId>14c3078d-81a6-4d26-bce7-a99d2c70f01b</xr:TypeId>
-						<xr:ValueId>562852b3-a586-4238-96b5-9a62593cb1ca</xr:ValueId>
+						<xr:TypeId>6f4628ca-7ffa-4be1-a3fc-dfedf9a0faef</xr:TypeId>
+						<xr:ValueId>d56535cc-1626-416a-be8e-460626442270</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -1154,7 +1252,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="35d9664e-4f8e-4613-9a6c-6b25fd0efe4d">
+					<Attribute uuid="14f5a6c0-8f73-4a63-9d11-d6d8fa225a35">
 						<Properties>
 							<Name>ПозицияЛокальнойСметы</Name>
 							<Synonym>
@@ -1194,7 +1292,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="174bb441-51f1-4b9c-8876-dc667dc57811">
+					<Attribute uuid="468bae4a-f460-4ffb-a356-60ce62296ee2">
 						<Properties>
 							<Name>НаименованиеЭлемента</Name>
 							<Synonym>
@@ -1234,7 +1332,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="51c113a8-6dde-4ebe-9791-8a26751b1403">
+					<Attribute uuid="fccd21b0-cf30-4529-be58-4721f8e4a253">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -1275,13 +1373,17 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="f321cacb-b2a2-4855-b825-3f8fec731189">
+					<Attribute uuid="fa6cb06a-b81b-47d4-9d4d-738c42f5dfeb">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Единица измерения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Unit measurement</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1315,7 +1417,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="a95d2921-c957-4089-bf4c-8ef52c929f68">
+					<Attribute uuid="7cd51638-cca9-4379-8853-b1fd3d83185c">
 						<Properties>
 							<Name>Основная</Name>
 							<Synonym>
@@ -1351,7 +1453,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="a7994bbc-7c03-4785-adb3-0e45841c9ffa">
+					<Attribute uuid="9ba18f3d-b8a3-4d77-af02-694b865c71bd">
 						<Properties>
 							<Name>КлючСтрокиСмета</Name>
 							<Synonym>
@@ -1391,7 +1493,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c45676da-3fd5-4fa0-903c-c1f589e3466c">
+					<Attribute uuid="f94f00e1-33d8-4d64-a28d-8529758ee937">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -1431,7 +1533,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="77d26a56-ac4f-4ae4-b977-37f256b6d3dc">
+					<Attribute uuid="8018c6c7-717d-4228-885e-0bff2ce2b9a4">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -1467,7 +1569,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="76f8d2bb-6b8d-4003-bc22-ef1e06f5a6b1">
+					<Attribute uuid="d6bceca9-8b3c-43ff-99cb-133af0c73b06">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -1503,7 +1605,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="000042af-d5e9-4d9c-b8e3-d41f99dd51c7">
+					<Attribute uuid="c58c4dcf-32a4-4a26-af02-998236ea5e61">
 						<Properties>
 							<Name>ВидРаботы</Name>
 							<Synonym>
@@ -1543,7 +1645,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="5b11659a-c2fc-4719-87e0-01081efc1500">
+					<Attribute uuid="c0429a11-3352-4928-a66f-d19ae16a4c0b">
 						<Properties>
 							<Name>РаспределениеСметнойСтоимости</Name>
 							<Synonym>
@@ -1556,8 +1658,8 @@
 							<Type>
 								<v8:Type>xs:decimal</v8:Type>
 								<v8:NumberQualifiers>
-									<v8:Digits>3</v8:Digits>
-									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:Digits>8</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
 									<v8:AllowedSign>Any</v8:AllowedSign>
 								</v8:NumberQualifiers>
 							</Type>
@@ -1584,7 +1686,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c99ddceb-e9b6-4085-b036-65f06e86778d">
+					<Attribute uuid="fad91e4a-5c0e-4ce0-bd74-213aaaa1c853">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -1624,7 +1726,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="2c9f7c62-8864-4044-832b-7f8c9bfcaba1">
+					<Attribute uuid="bbb1be58-7480-4eec-946d-1d570f262e2e">
 						<Properties>
 							<Name>ОбъемРаботРаспред</Name>
 							<Synonym>
@@ -1665,7 +1767,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="1b412dbd-6921-496c-91a6-f7c56e6a7b32">
+					<Attribute uuid="3eac2885-9cf1-4166-b992-c7985727fbd7">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -1694,6 +1796,47 @@
 							<MaxValue xsi:nil="true"/>
 							<FillFromFillingValue>false</FillFromFillingValue>
 							<FillValue xsi:type="xs:string"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b40ef256-6adb-4dbf-9a3d-18c5128ca978">
+						<Properties>
+							<Name>НПП</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НПП</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
 							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>

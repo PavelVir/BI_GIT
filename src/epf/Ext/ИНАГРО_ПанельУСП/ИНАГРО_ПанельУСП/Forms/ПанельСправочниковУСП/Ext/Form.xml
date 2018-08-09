@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияОтступ" id="73">
+			<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ДекорацияОтступExtendedTooltip" id="75"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаГоризонт" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="103"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="155">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="156"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбщие" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общие справочники</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обеспечение потребностей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОбщиеРасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<Button name="ОткрытьОрганизации" id="78">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьОрганизации</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьОрганизацииРасширеннаяПодсказка" id="79"/>
+								</Button>
+								<Button name="ОткрытьАльбом" id="88">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьАльбом</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьАльбомРасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="ОткрытьВидыНР" id="90">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВидыНР</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьВидыНРРасширеннаяПодсказка" id="91"/>
+								</Button>
+								<Button name="ОткрытьОперации" id="80">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьОперации</CommandName>
+									<ExtendedTooltip name="ОткрытьОперацииРасширеннаяПодсказка" id="81"/>
+								</Button>
+								<Button name="ОткрытьПричиныОтклонений" id="92">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПричиныОтклонений</CommandName>
+									<ExtendedTooltip name="ОткрытьПричиныОтклоненийРасширеннаяПодсказка" id="93"/>
+								</Button>
+								<Button name="ОткрытьРоли" id="94">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьРоли</CommandName>
+									<ExtendedTooltip name="ОткрытьРолиРасширеннаяПодсказка" id="95"/>
+								</Button>
+								<Button name="ОткрытьДолжностиУСП" id="161">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьДолжностиУСП</CommandName>
+									<ExtendedTooltip name="ОткрытьДолжностиУСПРасширеннаяПодсказка" id="162"/>
+								</Button>
+								<Button name="ОткрытьСостав" id="96">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСостав</CommandName>
+									<ExtendedTooltip name="ОткрытьСоставРасширеннаяПодсказка" id="97"/>
+								</Button>
+								<Button name="ОткрытьСтатьиРасходов" id="98">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСтатьиРасходов</CommandName>
+									<ExtendedTooltip name="ОткрытьСтатьиРасходовРасширеннаяПодсказка" id="99"/>
+								</Button>
+								<Button name="ОткрытьСтатьяРасходовСубподряд" id="153">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСтатьяРасходовСубподряд</CommandName>
+									<ExtendedTooltip name="ОткрытьСтатьяРасходовСубподрядРасширеннаяПодсказка" id="154"/>
+								</Button>
+								<Button name="ОткрытьСтоимостьСоставаРесурса" id="100">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСтоимостьСоставаРесурса</CommandName>
+									<ExtendedTooltip name="ОткрытьСтоимостьСоставаРесурсаРасширеннаяПодсказка" id="101"/>
+								</Button>
+								<Button name="ОткрытьВеткиПроекта" id="157">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВеткиПроектов</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ветки проектов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОткрытьВеткиПроектаРасширеннаяПодсказка" id="158"/>
+								</Button>
+								<Button name="КонстантаЗапретУтверждения" id="159">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.КонстантаЗапретУтверждения</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрет утверждения УГПР без классификаторов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КонстантаЗапретУтвержденияРасширеннаяПодсказка" id="160"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКлассификаторы" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Классификаторы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКлассификаторыРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<Button name="ОткрытьКонструктивы" id="118">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьКонструктивы</CommandName>
+									<ExtendedTooltip name="ОткрытьКонструктивыРасширеннаяПодсказка" id="119"/>
+								</Button>
+								<Button name="ОткрытьПодконструктив" id="124">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПодконструктив</CommandName>
+									<ExtendedTooltip name="ОткрытьПодконструктивРасширеннаяПодсказка" id="125"/>
+								</Button>
+								<Button name="ОткрытьПодконструктивы2" id="142">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПодконструктивы2</CommandName>
+									<ExtendedTooltip name="ОткрытьПодконструктивы2РасширеннаяПодсказка" id="143"/>
+								</Button>
+								<Button name="ОткрытьСтроительныеОбъектыКласс" id="122">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСтроительныеОбъектыКласс</CommandName>
+									<ExtendedTooltip name="ОткрытьСтроительныеОбъектыКлассРасширеннаяПодсказка" id="123"/>
+								</Button>
+								<Button name="ОткрытьЭлементы" id="126">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьЭлементы</CommandName>
+									<ExtendedTooltip name="ОткрытьЭлементыРасширеннаяПодсказка" id="127"/>
+								</Button>
+								<Button name="ОткрытьЭлементы2" id="128">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьЭлементы2</CommandName>
+									<ExtendedTooltip name="ОткрытьЭлементы2РасширеннаяПодсказка" id="129"/>
+								</Button>
+								<Button name="ОткрытьВидыРаботКлас" id="120">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВидыРаботКлас</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Виды работ (Нормативные сборники)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОткрытьВидыРаботКласРасширеннаяПодсказка" id="121"/>
+								</Button>
+								<Button name="ОткрытьРесурсы" id="136">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьРесурсы</CommandName>
+									<ExtendedTooltip name="ОткрытьРесурсыРасширеннаяПодсказка" id="137"/>
+								</Button>
+								<Button name="ОткрытьСоответствияСметныхЕдиниц" id="138">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСоответствияСметныхЕдиниц</CommandName>
+									<ExtendedTooltip name="ОткрытьСоответствияСметныхЕдиницРасширеннаяПодсказка" id="139"/>
+								</Button>
+								<Button name="Справочник_BI_ККЭ" id="163">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Справочник_BI_ККЭ</CommandName>
+									<ExtendedTooltip name="Справочник_BI_ККЭРасширеннаяПодсказка" id="164"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="146">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="147"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПроекты" id="84">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обеспечение потребностей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПроектыРасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<Button name="ОткрытьПроекты" id="82">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПроекты</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПроектыРасширеннаяПодсказка" id="83"/>
+								</Button>
+								<Button name="ОткрытьГрафикиПроекта" id="144">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьГрафикиПроекта</CommandName>
+									<ExtendedTooltip name="ОткрытьГрафикиПроектаРасширеннаяПодсказка" id="145"/>
+								</Button>
+								<Button name="ОткрытьСоответствияПроекта" id="140">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСоответствияПроекта</CommandName>
+									<ExtendedTooltip name="ОткрытьСоответствияПроектаРасширеннаяПодсказка" id="141"/>
+								</Button>
+								<Button name="ОткрытьWBS" id="104">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьWBS</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьWBSРасширеннаяПодсказка" id="105"/>
+								</Button>
+								<Button name="ОткрытьВидыРабот" id="106">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВидыРабот</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Виды работ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьВидыРаботРасширеннаяПодсказка" id="107"/>
+								</Button>
+								<Button name="ОткрытьВерсия" id="108">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВерсия</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьВерсияРасширеннаяПодсказка" id="109"/>
+								</Button>
+								<Button name="ОткрытьСценарий" id="110">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСценарий</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьСценарийРасширеннаяПодсказка" id="111"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШаблоны" id="130">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаблоны</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаблоны</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаШаблоныРасширеннаяПодсказка" id="131"/>
+							<ChildItems>
+								<Button name="ОткрытьВидыПроектов" id="132">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьВидыПроектов</CommandName>
+									<ExtendedTooltip name="ОткрытьВидыПроектовРасширеннаяПодсказка" id="133"/>
+								</Button>
+								<Button name="ОткрытьШаблоныВБС" id="134">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьШаблоныВБС</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаблоны WBS</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОткрытьШаблоныВБСРасширеннаяПодсказка" id="135"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаГоризонт2" id="114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонт2РасширеннаяПодсказка" id="115"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ОткрытьОрганизации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Юридические лица и предприниматели нашего предприятия.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОрганизации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОперации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОперации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПроекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проектов предприятия с указанием темы проекта, плановых и фактических сроков работы по проекту, ответственного по проекту, привлеченных к проекту лиц.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПроекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьАльбом" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Альбом проектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика WBS локальной сметы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьАльбом</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидыНР" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды накладных расходов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для сметного расчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидыНР</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПричиныОтклонений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причины отклонений</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПричиныОтклонений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРоли" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть роли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРоли</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСостав" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав ресурса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть состав</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСостав</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтатьиРасходов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статьи расходов ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть статьи расходов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСтатьиРасходов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтоимостьСоставаРесурса" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость состава ресурса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть стоимость состава ресурса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСтоимостьСоставаРесурса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьWBS" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>WBS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для описания структуры уровней сметы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьWBS</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидыРабот" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть виды работ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для хранения перечня работ календарного плана </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидыРабот</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсия" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для разграничения вариантов выполнения графиков производства работ </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВерсия</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСценарий" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для хранения вариантов расценки бюджета объекта строительства по определенной версии проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСценарий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтроительныеОбъекты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строительные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть строительные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСтроительныеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКонструктивы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктивы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предназначен для хранения перечня конструктивов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКонструктивы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидыРаботКлас" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды работ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для хранения списка работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидыРаботКлас</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтроительныеОбъектыКласс" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строительные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть строительные объекты класс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСтроительныеОбъектыКласс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПодконструктив" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подконструктивы 1 уровня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подконструктив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПодконструктив</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЭлементы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы объектов строительства 1 уровня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть элементы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЭлементы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЭлементы2" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы объектов строительства 2 уровня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть элементы2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЭлементы2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидыПроектов" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды проектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды проектов </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидыПроектов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьШаблоныВБС" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть шаблоны WBS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть шаблоны ВБС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьШаблоныВБС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРесурсы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ресурсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ресурсы (сметные)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРесурсы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСоответствияСметныхЕдиниц" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствия сметных единиц классификатору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть соответствия сметных единиц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСоответствияСметныхЕдиниц</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСоответствияПроекта" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствия проекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть соответствия проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСоответствияПроекта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПодконструктивы2" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подконструктивы 2 уровня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подконструктивы2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПодконструктивы2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьГрафикиПроекта" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графики проекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть графики проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьГрафикиПроекта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтатьяРасходовСубподряд" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья расходов для субподряда</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть статья расходов субподряд</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСтатьяРасходовСубподряд</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВеткиПроектов" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ветки проектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ветки проектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВеткиПроектов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КонстантаЗапретУтверждения" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константа запрет утверждения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константа запрет утверждения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонстантаЗапретУтверждения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьДолжностиУСП" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должности УСП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предназначен для хранения перечня должностей для состава ресурсов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДолжностиУСП</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справочник_BI_ККЭ" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Классификатор конструктивных элементов BIM-модели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник b i ККЭ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Справочник_BI_ККЭ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

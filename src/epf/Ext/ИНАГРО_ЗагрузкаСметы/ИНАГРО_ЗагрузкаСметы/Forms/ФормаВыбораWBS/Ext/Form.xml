@@ -39,6 +39,7 @@
 					<v8:content>Группа проект</v8:content>
 				</v8:item>
 			</Title>
+			<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -52,11 +53,13 @@
 			<ChildItems>
 				<LabelField name="Проект" id="54">
 					<DataPath>Проект</DataPath>
+					<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
 					<ContextMenu name="ПроектКонтекстноеМеню" id="55"/>
 					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="56"/>
 				</LabelField>
 				<LabelField name="ВидРаботы" id="97">
 					<DataPath>ВидРаботы</DataPath>
+					<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
 					<ContextMenu name="ВидРаботыКонтекстноеМеню" id="98"/>
 					<ExtendedTooltip name="ВидРаботыРасширеннаяПодсказка" id="99"/>
 				</LabelField>
@@ -99,6 +102,9 @@
 				<ContextMenu name="РаботыДЗ2УправлениеПоискомКонтекстноеМеню" id="68"/>
 				<ExtendedTooltip name="РаботыДЗ2УправлениеПоискомРасширеннаяПодсказка" id="69"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateCell">РаботыДЗ2ПриАктивизацииЯчейки</Event>
+			</Events>
 			<ChildItems>
 				<CheckBoxField name="РаботыДЗ2Выбор" id="94">
 					<DataPath>РаботыДЗ2.Выбор</DataPath>
@@ -148,6 +154,24 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="РаботыДЗ2РаспределениеСметнойСтоимостиКонтекстноеМеню" id="106"/>
 					<ExtendedTooltip name="РаботыДЗ2РаспределениеСметнойСтоимостиРасширеннаяПодсказка" id="107"/>
+					<Events>
+						<Event name="OnChange">РаботыДЗ2РаспределениеСметнойСтоимостиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РаботыДЗ2ФизОбъем" id="111">
+					<DataPath>РаботыДЗ2.ФизОбъем</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физ. объем</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаботыДЗ2ФизОбъемКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="РаботыДЗ2ФизОбъемРасширеннаяПодсказка" id="113"/>
+					<Events>
+						<Event name="OnChange">РаботыДЗ2ФизОбъемыПриИзменении</Event>
+					</Events>
 				</InputField>
 				<LabelField name="РаботыДЗ2ОбъемРабот" id="76">
 					<DataPath>РаботыДЗ2.ОбъемРабот</DataPath>
@@ -187,20 +211,90 @@
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
-		<LabelDecoration name="ДекорацияКвоВыбраноРабот" id="100">
-			<TextColor>style:FieldSelectionBackColor</TextColor>
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выбрано: 0 работ</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="ДекорацияКвоВыбраноРаботКонтекстноеМеню" id="101"/>
-			<ExtendedTooltip name="ДекорацияКвоВыбраноРаботРасширеннаяПодсказка" id="102"/>
-		</LabelDecoration>
+		<RadioButtonField name="СпособРаспределения" id="114">
+			<DataPath>СпособРаспределения</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вручную</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Процентом</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По объему работ</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СпособРаспределенияКонтекстноеМеню" id="115"/>
+			<ExtendedTooltip name="СпособРаспределенияРасширеннаяПодсказка" id="116"/>
+			<Events>
+				<Event name="OnChange">СпособРаспределенияПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<UsualGroup name="Группа1" id="117">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="118"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияКвоВыбраноРабот" id="100">
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрано: 0 работ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияКвоВыбраноРаботКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ДекорацияКвоВыбраноРаботРасширеннаяПодсказка" id="102"/>
+				</LabelDecoration>
+				<LabelField name="ОбъемКРаспределению" id="108">
+					<DataPath>ОбъемКРаспределению</DataPath>
+					<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+					<ContextMenu name="ОбъемКРаспределениюКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ОбъемКРаспределениюРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+				<LabelField name="ОбъемРаспределенный" id="119">
+					<DataPath>ОбъемРаспределенный</DataPath>
+					<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+					<ContextMenu name="ОбъемРаспределенныйКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="ОбъемРаспределенныйРасширеннаяПодсказка" id="121"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Проект" id="108">
+		<Attribute name="Проект" id="122">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -215,7 +309,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СтруктураУГПР" id="111">
+		<Attribute name="СтруктураУГПР" id="125">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -226,7 +320,7 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="КлючСтроки" id="109">
+				<Column name="КлючСтроки" id="123">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -241,7 +335,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КлючСвязи" id="117">
+				<Column name="КлючСвязи" id="135">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -256,7 +350,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ВидРаботы" id="112">
+				<Column name="ВидРаботы" id="126">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -271,7 +365,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ОбъемРабот" id="113">
+				<Column name="ОбъемРабот" id="127">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -287,7 +381,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЭтоРабота" id="115">
+				<Column name="ЭтоРабота" id="129">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -298,12 +392,12 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="ЭтоМатериал" id="118">
+				<Column name="ЭтоМатериал" id="131">
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="ЕдиницаИзмерения" id="119">
+				<Column name="ЕдиницаИзмерения" id="133">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -320,7 +414,7 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="РаботыДЗ2" id="114">
+		<Attribute name="РаботыДЗ2" id="128">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -331,7 +425,7 @@
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="КлючСтроки" id="110">
+				<Column name="КлючСтроки" id="124">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -392,7 +486,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="КлючСвязи" id="116">
+				<Column name="КлючСвязи" id="130">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -407,7 +501,7 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЭтоРабота" id="6">
+				<Column name="ЭтоРабота" id="132">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -418,7 +512,7 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="Картинка" id="7">
+				<Column name="Картинка" id="134">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -434,7 +528,7 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="ЭтоМатериал" id="8">
+				<Column name="ЭтоМатериал" id="136">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -468,7 +562,23 @@
 						<v8:NumberQualifiers>
 							<v8:Digits>3</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФизОбъем" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физ объем</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>18</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
@@ -487,6 +597,54 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъемКРаспределению" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем к распределению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>18</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособРаспределения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъемРаспределенный" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем распределенный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>18</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
