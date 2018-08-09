@@ -87,6 +87,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КлючСтроки</dataPath>
 			<field>КлючСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифр позиции норматива</v8:content>
+				</v8:item>
+			</title>
 			<useRestriction>
 				<field>true</field>
 				<group>true</group>
@@ -284,6 +290,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КлючСтроки</dataPath>
 			<field>КлючСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифр позиции норматива</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 				<dcscom:required>true</dcscom:required>
@@ -1906,7 +1918,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Материалы / Период</v8:content>
+				<v8:content>План-фактный анализ расхода материалов: Материалы / Период</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -2034,20 +2046,20 @@
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Материал</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">КлючСтроки</dcsset:left>
 					<dcsset:comparisonType>InList</dcsset:comparisonType>
 					<dcsset:right xsi:type="v8:ValueListType">
 						<v8:valueType/>
 						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
 					</dcsset:right>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					<dcsset:userSettingID>4a6fb198-df71-45ff-b367-bf3280dcb928</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Материал</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>2b42d1b5-64c8-49b7-9263-bad009c7a633</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>0437a46f-d138-4678-a82d-13522916ce3d</dcsset:userSettingID>
@@ -2343,7 +2355,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Конструктивы / Материалы / Период</v8:content>
+				<v8:content>План-фактный анализ расхода материалов: Конструктивы / Материалы / Период</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -2640,15 +2652,15 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>ВидРаботы</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:field>КлючСтроки</dcsset:field>
+						<dcsset:groupType>Hierarchy</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>КлючСтроки</dcsset:field>
-						<dcsset:groupType>Hierarchy</dcsset:groupType>
+						<dcsset:field>ВидРаботы</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
@@ -2739,7 +2751,7 @@
 							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>ПотребностьВМатериалахЦена</dcsset:field>
+							<dcsset:field>Характеристика</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

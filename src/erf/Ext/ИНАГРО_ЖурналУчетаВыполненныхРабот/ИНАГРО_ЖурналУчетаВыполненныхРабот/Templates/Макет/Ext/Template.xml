@@ -742,9 +742,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>ВыполненнаяСтоимость</dataPath>
-		<expression>ВЫБОР КОГДА НЕ ЭтоРабота ТОГДА 0 ИНАЧЕ Сумма(ВыполненнаяСтоимость) КОНЕЦ</expression>
-		<group>ВидРаботы</group>
-		<group>КлючСтроки</group>
+		<expression>Сумма(ВыполненнаяСтоимость) </expression>
 	</totalField>
 	<parameter>
 		<name>КонецПериода</name>
@@ -853,7 +851,12 @@
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Журнал учета выполненных работ</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -861,6 +864,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Стоимость</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость, тенге</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>06f576d9-72d4-4c9e-b44f-0f05a1e4d708</dcsset:userSettingID>
@@ -923,6 +932,12 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Стоимость</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость, тенге</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:outputParameters>
@@ -1053,6 +1068,12 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>СтоимостьОстаток</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость, тенге</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
