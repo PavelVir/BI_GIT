@@ -1043,7 +1043,7 @@
 					<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
 					<d4p1:title/>
 					<d4p1:isShowTitle>true</d4p1:isShowTitle>
-					<d4p1:isShowLegend>true</d4p1:isShowLegend>
+					<d4p1:isShowLegend>false</d4p1:isShowLegend>
 					<d4p1:ttlBorder width="0">
 						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 					</d4p1:ttlBorder>
@@ -1128,7 +1128,7 @@
 					<d4p1:chartIsInit>true</d4p1:chartIsInit>
 					<d4p1:elementsChart>
 						<d4p1:left>0</d4p1:left>
-						<d4p1:right>0.167197452229299</d4p1:right>
+						<d4p1:right>0</d4p1:right>
 						<d4p1:top>0</d4p1:top>
 						<d4p1:bottom>0</d4p1:bottom>
 					</d4p1:elementsChart>
@@ -1195,7 +1195,7 @@
 							<d4p1:borderColor>auto</d4p1:borderColor>
 						</d4p1:titleArea>
 					</d4p1:seriesScale>
-					<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
+					<d4p1:legendPlacement>None</d4p1:legendPlacement>
 					<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 					<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
 					<d4p1:colorPaletteDescription>
@@ -1277,10 +1277,10 @@
 				<d4p1:fixedVariantMeasure>Month</d4p1:fixedVariantMeasure>
 				<d4p1:fixedVariantInterval>1</d4p1:fixedVariantInterval>
 				<d4p1:autoFullInterval>true</d4p1:autoFullInterval>
-				<d4p1:fullIntervalBegin>2018-07-30T00:00:00</d4p1:fullIntervalBegin>
-				<d4p1:fullIntervalEnd>2018-08-10T23:59:59</d4p1:fullIntervalEnd>
-				<d4p1:visualBegin>2018-07-30T00:00:00</d4p1:visualBegin>
-				<d4p1:intervalDrawType>Gradient</d4p1:intervalDrawType>
+				<d4p1:fullIntervalBegin>2018-07-28T00:00:00</d4p1:fullIntervalBegin>
+				<d4p1:fullIntervalEnd>2018-08-08T23:59:59</d4p1:fullIntervalEnd>
+				<d4p1:visualBegin>2018-07-28T00:00:00</d4p1:visualBegin>
+				<d4p1:intervalDrawType>ThreeDimensional</d4p1:intervalDrawType>
 				<d4p1:noneVariantChars>3</d4p1:noneVariantChars>
 				<d4p1:noneVariantMeasure>Day</d4p1:noneVariantMeasure>
 				<d4p1:verticalStretch>None</d4p1:verticalStretch>
@@ -1394,6 +1394,15 @@
 				</v8:StringQualifiers>
 			</Type>
 			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Версия">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Parameter>
 	</Parameters>
 </Form>

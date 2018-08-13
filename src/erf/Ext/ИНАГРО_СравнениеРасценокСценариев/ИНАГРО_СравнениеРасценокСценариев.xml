@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalReport uuid="eae8d716-957e-483d-92d6-c26e26ead4a0">
+	<ExternalReport uuid="0fbe9d4e-b7f9-44bc-bfb0-434058dded89">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>e41aff26-25cf-4bb6-b6c1-3f478a75f374</xr:ClassId>
-				<xr:ObjectId>3f710b3a-aece-40c0-8fd0-a443e20afe25</xr:ObjectId>
+				<xr:ObjectId>f0477019-5722-4e5c-ab08-fadaaf686c2f</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalReportObject.ИНАГРО_СравнениеРасценокСценариев" category="Object">
-				<xr:TypeId>587958f2-a5c9-4648-9c80-b6c23c8aff92</xr:TypeId>
-				<xr:ValueId>4d9d73b7-6984-4bab-9b2c-400376916817</xr:ValueId>
+				<xr:TypeId>a1b77909-d2ff-427f-b1dc-03c80ff9dca2</xr:TypeId>
+				<xr:ValueId>41950b43-3610-4b7b-a2e1-2983dee9e836</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
