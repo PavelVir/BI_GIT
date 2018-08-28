@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalDataProcessor uuid="dd96f14a-2f17-4801-88a1-c1637ef3d21c">
+	<ExternalDataProcessor uuid="099ea11a-c171-41d6-97eb-3d286bb151a8">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>f3ff74ad-b1ac-4d5a-adc5-529bb9da1c7f</xr:ObjectId>
+				<xr:ObjectId>9baa889b-6f4d-478a-b790-057159a2c815</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.BI_ЗагрузкаВУГПР_kenml" category="Object">
-				<xr:TypeId>48efbfb2-f359-4c18-b9ed-f234e10f680c</xr:TypeId>
-				<xr:ValueId>f36b6781-ec0b-474c-956e-66b5c05769a8</xr:ValueId>
+				<xr:TypeId>2403c49d-a158-47aa-9a2c-771d9147c562</xr:TypeId>
+				<xr:ValueId>65b0e1c9-6dba-47dd-a0e7-9376a4bdc742</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -16,7 +16,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузка из kenml (2.4.5.4)</v8:content>
+					<v8:content>Загрузка из kenml (2.4.5.5)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -24,7 +24,7 @@
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="e85002b1-00b0-4e78-af4a-ebf9cdd34983">
+			<Attribute uuid="cc3655b0-ba20-40ba-a720-98ac0992bd4c">
 				<Properties>
 					<Name>Проект</Name>
 					<Synonym>
