@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalDataProcessor uuid="c0a7989d-b583-432d-94f7-099b3af361b9">
+	<ExternalDataProcessor uuid="37915ba4-b786-4954-b2f0-1409085011fc">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>bea8df64-c613-4ae9-8c93-9d9217b739bb</xr:ObjectId>
+				<xr:ObjectId>ee2678f6-70f8-4dd7-8833-fc66a9fb538b</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.ИНАГРО_ИнтеграцияPrimavera" category="Object">
-				<xr:TypeId>0696b453-9e15-4bfd-a73b-36e6b2322b28</xr:TypeId>
-				<xr:ValueId>7e03a58d-0f51-43ed-a0a3-c826d9ba7de5</xr:ValueId>
+				<xr:TypeId>4f45640a-f61b-4be0-bbf0-864b9cd90b85</xr:TypeId>
+				<xr:ValueId>9adb3ed8-9e2e-40c2-9cba-6c42b2f9d94c</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -28,7 +28,7 @@
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="1a9714c9-b958-46c8-8215-5f1cf316c4cc">
+			<Attribute uuid="780d830a-a035-411d-ba33-f740f0cb6f36">
 				<Properties>
 					<Name>ДокументУГПР</Name>
 					<Synonym>
@@ -66,7 +66,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="b53c9b56-28d1-4676-bf99-0b6abf4c3d46">
+			<Attribute uuid="cec246da-473e-425d-84ef-ebd9fcd5b3d7">
 				<Properties>
 					<Name>Проект</Name>
 					<Synonym>
@@ -104,7 +104,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="31ca5471-74b6-4660-be1d-18d8de81dd0d">
+			<Attribute uuid="2628c903-2367-4387-ab74-cb517f99ec57">
 				<Properties>
 					<Name>Версия</Name>
 					<Synonym>
@@ -136,7 +136,7 @@
 					<ChoiceParameterLinks>
 						<xr:Link>
 							<xr:Name>Отбор.Владелец</xr:Name>
-							<xr:DataPath xsi:type="xs:string">0:b53c9b56-28d1-4676-bf99-0b6abf4c3d46</xr:DataPath>
+							<xr:DataPath xsi:type="xs:string">0:cec246da-473e-425d-84ef-ebd9fcd5b3d7</xr:DataPath>
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
@@ -148,7 +148,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="89f2a9ff-c396-4fde-9cd0-bed39c17db8a">
+			<Attribute uuid="2bdf5a25-fde8-4065-a012-31ff1f794a69">
 				<Properties>
 					<Name>ВерсияВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -180,7 +180,7 @@
 					<ChoiceParameterLinks>
 						<xr:Link>
 							<xr:Name>Отбор.Владелец</xr:Name>
-							<xr:DataPath xsi:type="xs:string">0:b53c9b56-28d1-4676-bf99-0b6abf4c3d46</xr:DataPath>
+							<xr:DataPath xsi:type="xs:string">0:cec246da-473e-425d-84ef-ebd9fcd5b3d7</xr:DataPath>
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
@@ -192,7 +192,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="ccbbd71a-f2e9-4c70-8f96-4b19e830fa28">
+			<Attribute uuid="fcc6f6b6-78c3-405d-b83b-d1233b2fc770">
 				<Properties>
 					<Name>ВыгружатьWBS</Name>
 					<Synonym>
@@ -226,7 +226,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="b8ddeda7-4817-4901-b781-5311ab4a859d">
+			<Attribute uuid="990fd390-d133-4593-932a-ca8f4b226da7">
 				<Properties>
 					<Name>ФормироватьWBS</Name>
 					<Synonym>
@@ -260,7 +260,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="59126ede-5084-4f25-b4ce-4e0ba6b4acc9">
+			<Attribute uuid="bf814e7c-62e8-4802-ae1e-4e4750a2a9c9">
 				<Properties>
 					<Name>ВыгружатьРаботы</Name>
 					<Synonym>
@@ -294,7 +294,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="77275586-a979-45a9-81a3-852c3a9bdb3d">
+			<Attribute uuid="fb0412a1-21d8-4988-84aa-be2e300dd5cd">
 				<Properties>
 					<Name>ФормироватьРаботы</Name>
 					<Synonym>
@@ -328,7 +328,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="431cc55a-eed1-4183-85e4-0bf3efcb610e">
+			<Attribute uuid="fe8732c0-bf17-4680-b086-0de2da4c496a">
 				<Properties>
 					<Name>ВыгружатьРесурсы</Name>
 					<Synonym>
@@ -362,7 +362,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="49e16233-8301-4f1b-a734-6b7c9ee39ee6">
+			<Attribute uuid="4cfc01c6-8126-4240-b03f-6d1f6f7f823b">
 				<Properties>
 					<Name>ФормироватьРесурсы</Name>
 					<Synonym>
@@ -396,7 +396,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="bca8fc68-6878-4b09-9572-a8381c9eb4ee">
+			<Attribute uuid="e652f5da-64f7-4e65-9313-125f366e1b62">
 				<Properties>
 					<Name>ВыгружатьПроект</Name>
 					<Synonym>
@@ -430,7 +430,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="c70381bd-1dd5-4505-ba8c-447379c34198">
+			<Attribute uuid="5112c5c9-1328-46a1-894b-784b9f28050c">
 				<Properties>
 					<Name>ФормироватьПроект</Name>
 					<Synonym>
@@ -464,7 +464,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="50795cf4-8973-45b4-b228-3247f487ed5f">
+			<Attribute uuid="f140a277-5103-4008-bcc4-65c5b8a8d2b6">
 				<Properties>
 					<Name>ВыгружатьОперации</Name>
 					<Synonym>
@@ -498,7 +498,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="774ef974-79de-42b3-be2d-bfbc8551646a">
+			<Attribute uuid="91b32214-02a3-4bbd-80a0-875e0ac7303c">
 				<Properties>
 					<Name>ФормироватьОперации</Name>
 					<Synonym>
@@ -532,7 +532,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="5f93ef8d-d995-497c-b4bc-039c0b9af32e">
+			<Attribute uuid="8e056204-db3d-4d42-a475-688a8c74cad2">
 				<Properties>
 					<Name>ОчищатьТаблицыПередВыгрузкой</Name>
 					<Synonym>
@@ -566,7 +566,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="2605ef10-95a7-4121-ab91-ea4a1e9ebbdf">
+			<Attribute uuid="4958b42f-9140-4376-9625-3a0151adf794">
 				<Properties>
 					<Name>ОповещатьПользователя</Name>
 					<Synonym>
@@ -600,7 +600,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="2d480499-dbd5-4ef1-9394-82b004e9a26c">
+			<Attribute uuid="745821fa-9e47-44b4-81ec-5eb6b9af3713">
 				<Properties>
 					<Name>ФормироватьПроектВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -634,7 +634,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="cce7ca06-6e54-4581-8f9b-82ba82019c41">
+			<Attribute uuid="09f89f96-62c6-4d9b-87ef-f2bcf076182c">
 				<Properties>
 					<Name>ВыгружатьWBSВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -668,7 +668,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="1abe3504-235b-4f3b-b0e3-bd1703e9b457">
+			<Attribute uuid="8aecc268-718e-4a1d-b435-ec9b46353565">
 				<Properties>
 					<Name>ФормироватьWBSВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -702,7 +702,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="bda040ce-f00c-44f6-888d-8d67dee75d19">
+			<Attribute uuid="6c0883bb-bbdf-4068-b23c-06ce63b79daa">
 				<Properties>
 					<Name>ВыгружатьРаботыВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -736,7 +736,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="8916f166-d9ad-4341-81c0-dbafa6dfe4df">
+			<Attribute uuid="17643c50-bb7a-4ad5-9288-6b6e7f5c8d46">
 				<Properties>
 					<Name>ФормироватьРаботыВедомостьСтоимостиРабот</Name>
 					<Synonym>
@@ -770,7 +770,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a77040ca-8842-4666-8b27-1ad5b3dd92e5">
+			<Attribute uuid="9d4f47a1-0710-4842-89ac-380b74c5c86a">
 				<Properties>
 					<Name>ВыгружатьСоответствияРабот</Name>
 					<Synonym>
@@ -804,7 +804,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="1f7d6921-b53b-4065-b519-dcf43f208e96">
+			<Attribute uuid="66ffc254-4de9-453c-8aa4-24a5b38aab60">
 				<Properties>
 					<Name>ФормироватьСоответствияРабот</Name>
 					<Synonym>
@@ -838,7 +838,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="e95e60f7-4539-42b7-bbfc-3c5559105cae">
+			<Attribute uuid="22a9175a-03ba-4349-9954-0926ff885c97">
 				<Properties>
 					<Name>ОстанавливатьсяПоОшибке</Name>
 					<Synonym>
