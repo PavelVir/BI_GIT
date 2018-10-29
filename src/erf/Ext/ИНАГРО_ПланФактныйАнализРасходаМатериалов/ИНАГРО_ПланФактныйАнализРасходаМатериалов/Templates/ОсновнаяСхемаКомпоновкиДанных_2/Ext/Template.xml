@@ -439,7 +439,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Код работы</v8:content>
+					<v8:content>Код WBS</v8:content>
 				</v8:item>
 			</title>
 			<useRestriction>
@@ -494,9 +494,6 @@
 				<v8:content>Количество отклонение</v8:content>
 			</v8:item>
 		</title>
-		<useRestriction>
-			<condition>true</condition>
-		</useRestriction>
 		<appearance>
 			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 				<dcscor:parameter>Формат</dcscor:parameter>
@@ -518,9 +515,48 @@
 				<v8:content>Сумма отклонение</v8:content>
 			</v8:item>
 		</title>
-		<useRestriction>
-			<condition>true</condition>
-		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЦенаПлан</dataPath>
+		<expression>выбор когда  isnull(КоличествоПлан,0) &lt;&gt; 0 тогда isnull(СуммаПлан,0) / isnull(КоличествоПлан,0) иначе 0 конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цена план</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЦенаФакт</dataPath>
+		<expression>выбор когда  isnull(КоличествоФакт,0) &lt;&gt; 0 тогда isnull(СуммаФакт,0) / isnull(КоличествоФакт,0) иначе 0 конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цена факт</v8:content>
+			</v8:item>
+		</title>
 		<appearance>
 			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 				<dcscor:parameter>Формат</dcscor:parameter>
@@ -557,6 +593,14 @@
 		<dataPath>СуммаПлан</dataPath>
 		<expression>Сумма(СуммаПлан)</expression>
 	</totalField>
+	<totalField>
+		<dataPath>ЦенаПлан</dataPath>
+		<expression>Максимум(ЦенаПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаФакт</dataPath>
+		<expression>Максимум(ЦенаФакт)</expression>
+	</totalField>
 	<parameter>
 		<name>СтандартныйПериод</name>
 		<title xsi:type="v8:LocalStringType">
@@ -587,6 +631,7 @@
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>ВидВерсииРабочая</name>
@@ -630,6 +675,15 @@
 						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаПлан</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Цена за ед.</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>СуммаПлан</dcsset:field>
 						<dcsset:lwsTitle>
 							<v8:item>
@@ -653,6 +707,15 @@
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаФакт</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Цена за ед.</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
@@ -752,6 +815,14 @@
 					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ЦенаПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ЦенаФакт</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:outputParameters>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -780,6 +851,14 @@
 					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ЦенаПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ЦенаФакт</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:outputParameters>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -814,7 +893,7 @@
 								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
 								<v8:date>0001-01-01T00:00:00</v8:date>
 							</dcsset:right>
-							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
 							<dcsset:userSettingID>016bb5df-ae37-4acc-a7e2-898cf0b0f1e6</dcsset:userSettingID>
 							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
 								<v8:item>
@@ -831,7 +910,7 @@
 								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
 								<v8:date>0001-01-01T00:00:00</v8:date>
 							</dcsset:right>
-							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
 							<dcsset:userSettingID>83240af8-522e-4de2-bf15-604016f30484</dcsset:userSettingID>
 							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
 								<v8:item>
@@ -846,6 +925,82 @@
 					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ПериодМесяц</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>0001-01-01T00:00:00</v8:date>
+							</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+							<dcsset:userSettingID>03414fef-173d-41e9-b71e-e9ee8a9a6ef3</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НачалоПериода</v8:content>
+								</v8:item>
+							</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ПериодМесяц</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>0001-01-01T00:00:00</v8:date>
+							</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+							<dcsset:userSettingID>468815d6-afa3-4f46-b62f-e8ae66c4736a</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>КонецПериода</v8:content>
+								</v8:item>
+							</dcsset:userSettingPresentation>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общее отклонение за период</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоОтклонение</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Количество</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаОтклонение</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:row>
