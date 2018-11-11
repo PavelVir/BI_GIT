@@ -514,6 +514,10 @@
 					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
 		</appearance>
 	</calculatedField>
 	<calculatedField>
@@ -534,6 +538,10 @@
 						<v8:content>ЧДЦ=2</v8:content>
 					</v8:item>
 				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 			</dcscor:item>
 		</appearance>
 	</calculatedField>
