@@ -54,6 +54,7 @@
 			</role>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
 					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
 				</dcscor:item>
