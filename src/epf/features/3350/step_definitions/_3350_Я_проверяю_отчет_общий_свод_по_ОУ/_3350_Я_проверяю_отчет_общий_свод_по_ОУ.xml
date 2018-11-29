@@ -26,6 +26,9 @@
 		<ChildObjects>
 			<Form>Форма</Form>
 			<Template>ТестУГПР</Template>
+			<Template>ВнешнийУГПР</Template>
+			<Template>РабочийУГПР</Template>
+			<Template>ФактКорректировкой</Template>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>
