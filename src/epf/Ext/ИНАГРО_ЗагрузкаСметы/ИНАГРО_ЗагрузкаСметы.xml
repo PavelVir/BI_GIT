@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
-	<ExternalDataProcessor uuid="58a31000-e70a-40af-a60b-cb1c2fbf7ef1">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<ExternalDataProcessor uuid="49b82095-feb2-4bed-bfeb-52dcb75969bb">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>28a6bd8c-7adc-4d30-9b4e-4f2c40afbb44</xr:ObjectId>
+				<xr:ObjectId>ff8c5a11-9ea8-462e-bf50-26f01f8bef1c</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.ИНАГРО_ЗагрузкаСметы" category="Object">
-				<xr:TypeId>8c06a171-be36-4546-a7b4-19058fa5faad</xr:TypeId>
-				<xr:ValueId>a767d7e1-a42c-4c29-a54f-2d4414a60c8b</xr:ValueId>
+				<xr:TypeId>9f8fc29f-cbfb-4dd8-95e4-39a397dfdfe5</xr:TypeId>
+				<xr:ValueId>923a1759-9bd6-4bcf-ab26-e27000a4c329</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -28,7 +28,7 @@
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="91cfd98d-ac6c-4135-a478-edb0a3108100">
+			<Attribute uuid="634f4c62-e913-4e5a-8e4b-3860fc07f88c">
 				<Properties>
 					<Name>Смета</Name>
 					<Synonym>
@@ -66,7 +66,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="7a7264e5-bbd0-4e3b-a848-28a0ca3fde01">
+			<Attribute uuid="2b189f1e-992b-4096-b6e0-bae9229c31f8">
 				<Properties>
 					<Name>Проект</Name>
 					<Synonym>
@@ -108,7 +108,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="7d821cfa-8d36-4608-8ccc-67c3d4ca47ae">
+			<Attribute uuid="5d91979c-6e6e-4032-8ccc-945317d0dda3">
 				<Properties>
 					<Name>Стройка</Name>
 					<Synonym>
@@ -146,15 +146,15 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<TabularSection uuid="0026b4cb-250b-43ca-9006-e9cb1642bd94">
+			<TabularSection uuid="be8d245e-e21c-4777-9c22-95ec376dd4c6">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.ПозицииСметы" category="TabularSection">
-						<xr:TypeId>38de36ad-38a9-4c67-b541-a8c1fc2476f0</xr:TypeId>
-						<xr:ValueId>a4a6c472-f2e8-4954-bd64-8ae4a84a7959</xr:ValueId>
+						<xr:TypeId>374d2950-5b28-4315-8231-762cb685c183</xr:TypeId>
+						<xr:ValueId>4f8e579c-3954-4f72-8818-18d09324bf68</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.ПозицииСметы" category="TabularSectionRow">
-						<xr:TypeId>f526d078-eb91-4f66-a49f-6fa9761e5b64</xr:TypeId>
-						<xr:ValueId>7d155f2c-8fde-4e27-9427-633292a93fa7</xr:ValueId>
+						<xr:TypeId>04e35c17-fd97-4b38-82f6-3b333d1b4096</xr:TypeId>
+						<xr:ValueId>3a2eab22-959f-447d-9ebc-4c0ba26b947a</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -198,7 +198,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="0fa5c755-87a1-4b7f-8b69-96f0f9336b05">
+					<Attribute uuid="7308a126-d64e-4675-b08d-9c6d5fefbbda">
 						<Properties>
 							<Name>Ссылка</Name>
 							<Synonym>
@@ -234,7 +234,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="11f19e94-faba-4f05-80e5-dd385046cc54">
+					<Attribute uuid="cd9beab9-b6fd-4fac-bc13-ec0e9633e272">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -275,7 +275,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8541af16-cad1-42ee-a0d6-fadca6a96f53">
+					<Attribute uuid="2692aa88-fc19-43ec-9a65-cc3fe7488365">
 						<Properties>
 							<Name>ИДРодителя</Name>
 							<Synonym>
@@ -311,7 +311,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="21414331-f104-40a6-ab92-1cdd086811f9">
+					<Attribute uuid="1df3bbd8-e9ed-416a-8c45-f79b539aacc2">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -351,7 +351,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="0c27143c-7028-42da-a90e-5e7c74277f14">
+					<Attribute uuid="0f06c90f-5a51-4883-8ac1-de69adebe0e0">
 						<Properties>
 							<Name>НаименованиеЭлемента</Name>
 							<Synonym>
@@ -391,7 +391,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="913fe5bf-8d95-417b-b43c-7cf74afd33f6">
+					<Attribute uuid="6d615d50-102d-461a-a7c0-e15c272e86d9">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -431,7 +431,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="83777939-3645-4770-b045-67a4db1d7918">
+					<Attribute uuid="10ffda2d-382d-4162-8f80-c887f56c3ba9">
 						<Properties>
 							<Name>ВидРасценки</Name>
 							<Synonym>
@@ -471,7 +471,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="d1e19023-643c-4fe1-810b-0f9f5d887d12">
+					<Attribute uuid="15f1f522-5bca-4d93-8fd1-e8e0e8a07a14">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
@@ -515,7 +515,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="a40284e3-e46a-48c0-9bbf-bb9fd4f6cb83">
+					<Attribute uuid="3a523d40-2b0f-4339-a469-df0c1710c69b">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -555,7 +555,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="383192d4-1ba3-4d9e-94ca-4bdbb932bf06">
+					<Attribute uuid="6f9bdbc2-c981-4534-974d-9cf5d76874d7">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -591,7 +591,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="e7fafda8-9b67-4d95-bea8-746b4bb8a13c">
+					<Attribute uuid="c68f1040-c960-496b-b36e-7cef59793b1c">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -627,7 +627,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8fd9ef2f-a0a7-4853-834a-b75a9d954dca">
+					<Attribute uuid="4d8c09c5-8710-4a78-94ed-99890cc10830">
 						<Properties>
 							<Name>Отобрано</Name>
 							<Synonym>
@@ -663,7 +663,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="1a60d29a-cfb1-425d-bd33-dc5ba6553fee">
+					<Attribute uuid="6ec1a253-38c3-40b9-b18a-9445d29e030c">
 						<Properties>
 							<Name>ОбщВсего</Name>
 							<Synonym>
@@ -704,7 +704,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="f5067236-a762-40a2-9063-3ff4217c47d2">
+					<Attribute uuid="5e480a32-068a-4eb5-abc0-c0c43200e999">
 						<Properties>
 							<Name>НПП</Name>
 							<Synonym>
@@ -747,15 +747,15 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="6d7b2a81-9109-49ee-9b69-df80ace045c6">
+			<TabularSection uuid="ac937081-43bc-47d5-962c-4d09ab7b0a7c">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.СтруктураУГПР" category="TabularSection">
-						<xr:TypeId>35f6c124-32c0-4c09-9139-b78060d1c46e</xr:TypeId>
-						<xr:ValueId>3f37222e-a9ff-408d-9b1e-122e61cdb431</xr:ValueId>
+						<xr:TypeId>8b52d516-6cf8-4bd0-b17e-9f53d75dfa78</xr:TypeId>
+						<xr:ValueId>613dd5cd-d5bd-4979-b6fd-d86591cbafe8</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.СтруктураУГПР" category="TabularSectionRow">
-						<xr:TypeId>cf0f1cb9-a008-49d0-8eb3-03717dc33602</xr:TypeId>
-						<xr:ValueId>75b578c1-55a9-484c-908b-25c0e2f9a0ed</xr:ValueId>
+						<xr:TypeId>05e2369c-a991-41d8-88c7-254da523fada</xr:TypeId>
+						<xr:ValueId>3f193a8f-233a-4ae4-8a11-de62d7018617</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -799,7 +799,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="e481380c-9229-4839-8883-4614e3d52a33">
+					<Attribute uuid="c95a60e9-2178-49b1-a3c4-0f4c9fbd46d8">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -839,7 +839,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8bd93ae2-ce32-4af0-abfd-8f869b8c8088">
+					<Attribute uuid="cf5fa715-6f81-4391-b93f-36aa5df18c63">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -879,7 +879,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="5442c6a0-b115-4eb5-a924-f859b2f95367">
+					<Attribute uuid="fec2d7f2-95d3-4e07-a890-590c3afc93cb">
 						<Properties>
 							<Name>ВидРаботы</Name>
 							<Synonym>
@@ -919,7 +919,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="ad69836a-9bf9-4f50-95ae-347b34e48a4f">
+					<Attribute uuid="f10d0c3d-46e4-45c9-a20a-98de22d2e09b">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
@@ -963,7 +963,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="48d44082-1dd6-423e-b91f-9a48cbb305ee">
+					<Attribute uuid="6801ba80-b1cf-4db1-9475-fa7df765a94c">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -1004,7 +1004,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="cae7cf75-586d-42b1-b61b-b0ec6fd9ea05">
+					<Attribute uuid="928dad4b-2caa-4c50-9728-b82fed4ab6cf">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -1040,7 +1040,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="4957da69-1593-4ef9-9218-90c3b16c42a0">
+					<Attribute uuid="6a701525-5c40-4b53-96ae-f613813b45ee">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -1076,7 +1076,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="d3a6a476-d74c-483a-933f-d747ea7af461">
+					<Attribute uuid="b7653774-ad40-45f2-8da6-bd6df350597d">
 						<Properties>
 							<Name>УДАЛИТЬОбъемРаботРаспред</Name>
 							<Synonym>
@@ -1117,7 +1117,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c2caeb60-6b3d-440b-97e3-7b0a6625fc07">
+					<Attribute uuid="5475d302-8cc4-4aa0-82c9-2a23d902c2e6">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -1157,7 +1157,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8f6b0947-95fc-41c4-830d-2e44b5cfc28e">
+					<Attribute uuid="36f35a0b-b413-44b8-a998-f68d3bf6652e">
 						<Properties>
 							<Name>НПП</Name>
 							<Synonym>
@@ -1200,15 +1200,15 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="7bde6577-bb96-4193-bae5-80dfd89254df">
+			<TabularSection uuid="50cefc7a-b1ed-46e9-a79b-31ad58e67cce">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.ИНАГРО_ЗагрузкаСметы.ТаблицаСоответствий" category="TabularSection">
-						<xr:TypeId>5150b1e7-11f1-4e64-89f9-447f69d499fa</xr:TypeId>
-						<xr:ValueId>c24c8147-c5ab-4295-92e5-1147b1fdf209</xr:ValueId>
+						<xr:TypeId>cf089955-dcea-4e8a-9454-fbb76184de11</xr:TypeId>
+						<xr:ValueId>9ecd6754-3a7e-4a39-ba4e-f849d5102fc6</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.ИНАГРО_ЗагрузкаСметы.ТаблицаСоответствий" category="TabularSectionRow">
-						<xr:TypeId>6f4628ca-7ffa-4be1-a3fc-dfedf9a0faef</xr:TypeId>
-						<xr:ValueId>d56535cc-1626-416a-be8e-460626442270</xr:ValueId>
+						<xr:TypeId>4a51c927-800b-40b8-9ca2-9485571f2352</xr:TypeId>
+						<xr:ValueId>e2f5fbb3-5189-434b-98db-9f2793e6c2bf</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -1252,7 +1252,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="14f5a6c0-8f73-4a63-9d11-d6d8fa225a35">
+					<Attribute uuid="ed8f01e2-a028-4cfb-b2c8-866e2f6c9f5b">
 						<Properties>
 							<Name>ПозицияЛокальнойСметы</Name>
 							<Synonym>
@@ -1292,7 +1292,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="468bae4a-f460-4ffb-a356-60ce62296ee2">
+					<Attribute uuid="a2aab11c-eaf7-4df3-ad23-2b881704a8b3">
 						<Properties>
 							<Name>НаименованиеЭлемента</Name>
 							<Synonym>
@@ -1332,7 +1332,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="fccd21b0-cf30-4529-be58-4721f8e4a253">
+					<Attribute uuid="3ef9caf0-dfd9-433c-b4de-063fb13e6c91">
 						<Properties>
 							<Name>ОбъемРабот</Name>
 							<Synonym>
@@ -1373,7 +1373,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="fa6cb06a-b81b-47d4-9d4d-738c42f5dfeb">
+					<Attribute uuid="2fdc490b-e191-4ec8-9579-43e8c14dfbf2">
 						<Properties>
 							<Name>ЕдиницаИзмерения</Name>
 							<Synonym>
@@ -1417,7 +1417,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="7cd51638-cca9-4379-8853-b1fd3d83185c">
+					<Attribute uuid="2a2360c5-38c5-4ce5-9c66-0a5e5bca665b">
 						<Properties>
 							<Name>Основная</Name>
 							<Synonym>
@@ -1453,7 +1453,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="9ba18f3d-b8a3-4d77-af02-694b865c71bd">
+					<Attribute uuid="cf5c7a03-3478-4b4a-b882-cfdfb828225f">
 						<Properties>
 							<Name>КлючСтрокиСмета</Name>
 							<Synonym>
@@ -1493,7 +1493,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="f94f00e1-33d8-4d64-a28d-8529758ee937">
+					<Attribute uuid="f338845e-dc49-41ef-b733-686223f6500f">
 						<Properties>
 							<Name>КлючСтроки</Name>
 							<Synonym>
@@ -1533,7 +1533,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="8018c6c7-717d-4228-885e-0bff2ce2b9a4">
+					<Attribute uuid="e1b7efb6-84dd-41af-bcf0-f5d19f0a5d21">
 						<Properties>
 							<Name>ЭтоРабота</Name>
 							<Synonym>
@@ -1569,7 +1569,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="d6bceca9-8b3c-43ff-99cb-133af0c73b06">
+					<Attribute uuid="a84332c8-1803-4e79-8483-1c039f19c8a6">
 						<Properties>
 							<Name>ЭтоМатериал</Name>
 							<Synonym>
@@ -1605,7 +1605,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c58c4dcf-32a4-4a26-af02-998236ea5e61">
+					<Attribute uuid="48c988b4-a06c-4c34-86c0-8fdc82bb343c">
 						<Properties>
 							<Name>ВидРаботы</Name>
 							<Synonym>
@@ -1645,7 +1645,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c0429a11-3352-4928-a66f-d19ae16a4c0b">
+					<Attribute uuid="c9f8923f-67d6-4ef3-ace1-b9075f7c9e24">
 						<Properties>
 							<Name>РаспределениеСметнойСтоимости</Name>
 							<Synonym>
@@ -1686,7 +1686,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="fad91e4a-5c0e-4ce0-bd74-213aaaa1c853">
+					<Attribute uuid="efcc9eae-997f-4b73-adae-c009ffa04747">
 						<Properties>
 							<Name>КлючСвязи</Name>
 							<Synonym>
@@ -1726,7 +1726,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="bbb1be58-7480-4eec-946d-1d570f262e2e">
+					<Attribute uuid="01d6e576-e752-4a74-a739-b1b54644f07e">
 						<Properties>
 							<Name>ОбъемРаботРаспред</Name>
 							<Synonym>
@@ -1767,7 +1767,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="3eac2885-9cf1-4166-b992-c7985727fbd7">
+					<Attribute uuid="bfbc8be2-6b15-4d3a-bebe-73e34e66bf8a">
 						<Properties>
 							<Name>ШифрРасценки</Name>
 							<Synonym>
@@ -1807,7 +1807,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="b40ef256-6adb-4dbf-9a3d-18c5128ca978">
+					<Attribute uuid="05cd23f6-a48b-4c86-a3f5-7fea1a7da384">
 						<Properties>
 							<Name>НПП</Name>
 							<Synonym>
