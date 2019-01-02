@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ТаблицаИерархии</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСтроки</dataPath>
+			<field>КлючСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифр позиции норматива</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСвязи</dataPath>
+			<field>КлючСвязи</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Версия</dataPath>
+			<field>Версия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРаботы</dataPath>
+			<field>ВидРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодWBS</dataPath>
+			<field>КодWBS</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСтроки.НомерВСтруктуре</dataPath>
+			<field>НомерВСтруктуре</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер в структуре</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШифрПозицииНорматива</dataPath>
+			<field>ШифрПозицииНорматива</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифр позиции норматива</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИНАГРО_УГПРРаботы.Версия КАК Версия,
+	ИНАГРО_УГПРРаботы.КлючСтроки КАК КлючСтроки,
+	ИНАГРО_УГПРРаботы.КлючСвязи КАК КлючСвязи,
+	ИНАГРО_УГПРРаботы.ВидРаботы КАК ВидРаботы,
+	МИНИМУМ(ИНАГРО_УГПРРаботы.КодWBS) КАК КодWBS,
+	МИНИМУМ(ИНАГРО_УГПРРаботы.НомерВСтруктуре) КАК НомерВСтруктуре,
+	ВЫБОР
+		КОГДА ИНАГРО_УГПРРаботы.ЭтоРабота
+			ТОГДА ИНАГРО_УГПРРаботы.ВидРаботы.ШифрПозицииНорматива
+		ИНАЧЕ ИНАГРО_УГПРРаботы.КороткоеИмя
+	КОНЕЦ КАК ШифрПозицииНорматива
+{ВЫБРАТЬ
+	Версия.*,
+	КлючСтроки,
+	КлючСвязи,
+	ВидРаботы.*,
+	КодWBS,
+	НомерВСтруктуре,
+	ШифрПозицииНорматива}
+ИЗ
+	РегистрСведений.ИНАГРО_УГПРРаботы КАК ИНАГРО_УГПРРаботы
+{ГДЕ
+	(ИНАГРО_УГПРРаботы.Версия = &amp;Версия),
+	(ИНАГРО_УГПРРаботы.Проект = &amp;Проект)}
+
+СГРУППИРОВАТЬ ПО
+	ИНАГРО_УГПРРаботы.КлючСтроки,
+	ИНАГРО_УГПРРаботы.Версия,
+	ИНАГРО_УГПРРаботы.КлючСвязи,
+	ИНАГРО_УГПРРаботы.ВидРаботы,
+	ВЫБОР
+		КОГДА ИНАГРО_УГПРРаботы.ЭтоРабота
+			ТОГДА ИНАГРО_УГПРРаботы.ВидРаботы.ШифрПозицииНорматива
+		ИНАЧЕ ИНАГРО_УГПРРаботы.КороткоеИмя
+	КОНЕЦ</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеВерсии</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъемОбщий</dataPath>
+			<field>ОбъемОбщий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем общий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСтроки</dataPath>
+			<field>КлючСтроки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРаботы</dataPath>
+			<field>ВидРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоРабота</dataPath>
+			<field>ЭтоРабота</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерВСтруктуре</dataPath>
+			<field>НомерВСтруктуре</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИНАГРО_УГПРРаботы.КлючСтроки КАК КлючСтроки,
+	ИНАГРО_УГПРРаботы.Объем КАК ОбъемОбщий,
+	ИНАГРО_УГПРРаботы.ВидРаботы КАК ВидРаботы,
+	ИНАГРО_УГПРРаботы.ЭтоРабота КАК ЭтоРабота,
+	ИНАГРО_УГПРРаботы.НомерВСтруктуре КАК НомерВСтруктуре
+{ВЫБРАТЬ
+	КлючСтроки,
+	ОбъемОбщий,
+	ВидРаботы.*,
+	ЭтоРабота,
+	НомерВСтруктуре}
+ИЗ
+	РегистрСведений.ИНАГРО_УГПРРаботы КАК ИНАГРО_УГПРРаботы
+ГДЕ
+	ИНАГРО_УГПРРаботы.Проект = &amp;Проект
+	И ИНАГРО_УГПРРаботы.Версия = &amp;Версия
+	И ИНАГРО_УГПРРаботы.ЭтоРабота
+{ГДЕ
+	ИНАГРО_УГПРРаботы.КлючСтроки}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеРаспределения</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Длительность</dataPath>
+			<field>Длительность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецРаботыПлан</dataPath>
+			<field>КонецРаботыПлан</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъемРаботы</dataPath>
+			<field>ОбъемРаботы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем работы по периоду</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоРаботыПлан</dataPath>
+			<field>НачалоРаботыПлан</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСтроки</dataPath>
+			<field>КлючСтроки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ИНАГРО_УГПРПараметрыВыполненияРабот.НачалоРаботыПлан, МЕСЯЦ) КАК Период,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.КлючСтроки КАК КлючСтроки,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.НачалоРаботыПлан КАК НачалоРаботыПлан,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.КонецРаботыПлан КАК КонецРаботыПлан,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.ОбъемРаботы КАК ОбъемРаботы,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.Длительность КАК Длительность
+{ВЫБРАТЬ
+	КлючСтроки,
+	НачалоРаботыПлан,
+	КонецРаботыПлан,
+	ОбъемРаботы,
+	Длительность}
+ИЗ
+	РегистрСведений.ИНАГРО_УГПРПараметрыВыполненияРабот КАК ИНАГРО_УГПРПараметрыВыполненияРабот
+ГДЕ
+	ИНАГРО_УГПРПараметрыВыполненияРабот.Версия = &amp;Версия
+{ГДЕ
+	ИНАГРО_УГПРПараметрыВыполненияРабот.КлючСтроки,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.НачалоРаботыПлан,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.КонецРаботыПлан,
+	ИНАГРО_УГПРПараметрыВыполненияРабот.Длительность}</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаИерархии</sourceDataSet>
+		<destinationDataSet>ТаблицаИерархии</destinationDataSet>
+		<sourceExpression>КлючСвязи</sourceExpression>
+		<destinationExpression>КлючСтроки</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ДанныеВерсии</sourceDataSet>
+		<destinationDataSet>ТаблицаИерархии</destinationDataSet>
+		<sourceExpression>КлючСтроки</sourceExpression>
+		<destinationExpression>КлючСтроки</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ДанныеВерсии</sourceDataSet>
+		<destinationDataSet>ДанныеРаспределения</destinationDataSet>
+		<sourceExpression>КлючСтроки</sourceExpression>
+		<destinationExpression>КлючСтроки</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>Отклонение</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>Длительность</dataPath>
+		<expression>Сумма(Длительность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбъемОбщий</dataPath>
+		<expression>Сумма(ОбъемОбщий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбъемРаботы</dataPath>
+		<expression>Сумма(ОбъемРаботы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Отклонение</dataPath>
+		<expression>Сумма(ОбъемОбщий) - Сумма(ОбъемРаботы)</expression>
+	</totalField>
+	<parameter>
+		<name>Проект</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проект</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Проекты.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Версия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ИНАГРО_Версия.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.Владелец</dcscor:choiceParameter>
+						<dcscor:value>ПараметрыДанных.Проект</dcscor:value>
+						<dcscor:mode xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d7p1:LinkedValueChangeMode">Clear</dcscor:mode>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ПроверкаРаспределения</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проверка распределения</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидРаботы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъемОбщий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъемРаботы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отклонение</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>2253245a-0e4b-48e0-afcf-167648d62c03</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8bf0caf8-8c76-4cc1-b7fd-d899c74e32d8</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Проекты.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>f67dd8bd-9e34-4a32-92d6-2f7490b3be13</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Версия</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ИНАГРО_Версия.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>b47d18c4-8525-46ed-b67a-cbb15751f07c</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоРабота</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение работ по периоду</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОбъемРаботы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>КлючСтроки</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидРаботы</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>45acc428-83d4-4271-9c3e-7066faaa335b</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

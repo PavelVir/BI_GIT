@@ -1,5 +1,5 @@
 ﻿#language: ru
-
+@IgnoreOnCIMainBuild
 @exportscenarios
 
 Функционал: Я проверяю форму Настройки и справочники УСП

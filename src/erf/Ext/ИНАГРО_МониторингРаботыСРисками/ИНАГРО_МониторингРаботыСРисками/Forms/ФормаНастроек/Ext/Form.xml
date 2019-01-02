@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ScalingMode>Compact</ScalingMode>
+	<ReportFormType>Settings</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользовательские настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Table name="КомпоновщикНастроекНастройки" id="3">
+					<Representation>Tree</Representation>
+					<Autofill>true</Autofill>
+					<HorizontalLines>false</HorizontalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Отчет.SettingsComposer.Settings</DataPath>
+					<ContextMenu name="КомпоновщикНастроекНастройкиКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="КомпоновщикНастроекНастройкиКоманднаяПанель" id="5"/>
+					<ExtendedTooltip name="КомпоновщикНастроекНастройкиРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="КомпоновщикНастроекНастройкиСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КомпоновщикНастроекНастройкиСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КомпоновщикНастроекНастройкиУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalReportObject.ИНАГРО_МониторингРаботыСРисками</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>
