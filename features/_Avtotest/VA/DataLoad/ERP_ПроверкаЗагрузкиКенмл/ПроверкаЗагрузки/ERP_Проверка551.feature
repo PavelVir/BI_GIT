@@ -1,5 +1,7 @@
 ﻿#language: ru
 
+#report.feature=Обработки
+#report.story=ЗагрузкаКенМЛ
 
 @tree
 @exportscenarios
