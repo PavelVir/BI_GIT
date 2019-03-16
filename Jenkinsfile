@@ -2,7 +2,7 @@
 def connectionstring
 
 pipeline {
-    agent{label 'Term01'}
+    agent{label 'master'}
 
     environment {
         Storage = credentials('ci_bot')
