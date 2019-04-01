@@ -2,8 +2,9 @@
 
 @exportscenarios
 
-#report.feature=Обработки
-#report.story=ЗагрузкаКенМЛ
+#report.epic=Обработки
+#report.feature=ЗагрузкаКенМЛ
+#report.story=Проверка загрузки формата 5.5.5
 
 Функционал: Проверка загрузки формата 555 позиции без ресурсов
 

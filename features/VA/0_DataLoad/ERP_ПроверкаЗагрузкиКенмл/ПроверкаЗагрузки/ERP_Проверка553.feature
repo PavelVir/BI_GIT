@@ -3,8 +3,9 @@
 @exportscenarios
 @Tree
 
-#report.feature=Обработки
-#report.story=ЗагрузкаКенМЛ
+#report.epic=Обработки
+#report.feature=ЗагрузкаКенМЛ
+#report.story=Проверка загрузки формата 5.5.3
 
 Функционал: Проверка загрузки формата 5.5.3
 
