@@ -1,3 +1,4 @@
 .commit-amend-markdown
 *.bin
 *.cf
+Tools/LoadRepo_BiOuts.os
