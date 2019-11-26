@@ -1,6 +1,7 @@
 #language: ru
 
 @Tree
+@Ignore
 
 #report.epic=Обработки
 #report.feature=Инструмент создания норм
